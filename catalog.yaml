@@ -3,7 +3,7 @@ sources:
     description: ICON model output
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}ICON/main.yaml"
+        path: "{{CATALOG_DIR}}/ICON/main.yaml"
 
   FESOM:
     description: FESOM ocean model
