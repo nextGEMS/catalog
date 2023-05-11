@@ -1,0 +1,6 @@
+sources:
+  FESOM:
+    description: FESOM ocean model
+    driver: yaml_file_cat
+    args:
+        path: "https://raw.githubusercontent.com/nextGEMS/nextGEMS_Cycle3/main/catalog/FESOM/main.yaml"
