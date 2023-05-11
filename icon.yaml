@@ -1,0 +1,33 @@
+sources:
+  ngc3028:
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: /work/bm1235/k203123/NextGEMS_Cycle3.git/experiments/ngc3028/outdata/ngc3028_{{
+        time }}_{{ zoom }}.zarr
+    driver: zarr
+    parameters:
+      time:
+        allowed:
+        - PT30M
+        - PT3H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int

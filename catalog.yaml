@@ -1,4 +1,10 @@
 sources:
+  ICON:
+    description: ICON model output
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/icon.yaml"
+
   FESOM:
     description: FESOM ocean model
     driver: yaml_file_cat
