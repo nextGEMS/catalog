@@ -4,6 +4,11 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/ICON/main.yaml"
+  ICON_online:
+    description: ICON model output, subset available online
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/ICON/main_online.yaml"
 
   FESOM:
     description: FESOM ocean model

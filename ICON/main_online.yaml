@@ -1,0 +1,29 @@
+sources:
+  ngc3028:
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_b381d76e-63d7-4aeb-96f0-dfd91e102d40/ngc3028_hp/ngc3028_{{ time }}_{{ zoom }}.zarr
+    driver: zarr
+    parameters:
+      time:
+        allowed:
+        - PT30M
+        - PT3H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+      zoom:
+        allowed:
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
