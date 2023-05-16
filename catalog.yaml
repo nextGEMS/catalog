@@ -10,8 +10,13 @@ sources:
     args:
         path: "{{CATALOG_DIR}}/ICON/main_online.yaml"
 
+  IFS:
+    description: IFS model output
+    driver: yaml_file_cat
+    args:
+        path: "https://raw.githubusercontent.com/nextGEMS/catalog/main/IFS/main.yaml"
   FESOM:
-    description: FESOM ocean model
+    description: FESOM ocean model output
     driver: yaml_file_cat
     args:
         path: "https://raw.githubusercontent.com/nextGEMS/catalog/main/FESOM/main.yaml"
