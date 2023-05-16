@@ -4,12 +4,12 @@ plugins:
     - module: gribscan
 
 sources:
-  2D_1h_highres:
+  2D_1h_native:
     driver: zarr
     args:
       consolidated: False
       urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm2d.json
-  3D_6h_highres:
+  3D_6h_native:
     driver: zarr
     args:
       consolidated: False
