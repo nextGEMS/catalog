@@ -1,6 +1,6 @@
 # Available variables per resolution:
-# - 1_degree_monthly: ocv, t20d, ocu, sst, ci, zos, tav300, sav300, mld, sithick
-# - 025_degree_monthly: swvl1, 2t, ocv, so, t20d, ocu, sst, ttr, tsr, ci, zos, tav300, sav300, mld, sithick
+# - 1_degree_monthly: ocv, t20d, ocu, sst, ci, zos, tav300, sav300, mld, sithick, temp, salt
+# - 025_degree_monthly: swvl1, 2t, ocv, so, t20d, ocu, sst, ttr, tsr, ci, zos, tav300, sav300, mld, sithick, temp, salt
 
 plugins:
   source:
@@ -9,6 +9,10 @@ sources:
   025_degree_monthly:
     args:
       urlpath:
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/025/temp/temp_2020_025.nc
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/025/temp/temp_2021_025.nc
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/025/salt/salt_2020_025.nc
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/025/salt/salt_2021_025.nc
       - /scratch/a/a270046/cycle3/extracted/tco2559-ng5/moda/swvl1.nc
       - /scratch/a/a270046/cycle3/extracted/tco2559-ng5/moda/2t.nc
       - /scratch/a/a270046/cycle3/extracted/tco2559-ng5/moda/ocv.nc
@@ -30,6 +34,10 @@ sources:
   1_degree_monthly:
     args:
       urlpath:
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/100/temp/temp_2020_100.nc
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/100/temp/temp_2021_100.nc
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/100/salt/salt_2020_100.nc
+      - /work/bm1344/AWI/Cycle3/test/monthly_means/100/salt/salt_2021_100.nc
       - /scratch/a/a270046/cycle3/extracted/tco2559-ng5/ocv.nc
       - /scratch/a/a270046/cycle3/extracted/tco2559-ng5/t20d.nc
       - /scratch/a/a270046/cycle3/extracted/tco2559-ng5/ocu.nc
