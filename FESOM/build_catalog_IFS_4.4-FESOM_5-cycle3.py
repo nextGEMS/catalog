@@ -7,7 +7,7 @@ import intake
 base_dirs = ["/work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_",
 "/work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_"]
 
-out_catalog_name = "tco2559-ng5-cycle3.yaml"
+out_catalog_name = "IFS_4.4-FESOM_5-cycle3.yaml"
 # Dictionary to map variables to their sources
 variable_sources = {
     "2D_daily_native": [

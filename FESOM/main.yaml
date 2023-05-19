@@ -3,7 +3,7 @@ sources:
     description: 4.4km experiment, FESOM coupled with IFS
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3.yaml"
+        path: "{{CATALOG_DIR}}/IFS_4.4-FESOM_5-cycle3.yaml"
   tco2559-ng5-cycle3_interpolated:
     description: 4.4km experiment, FESOM coupled with IFS
     driver: yaml_file_cat
