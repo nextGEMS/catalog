@@ -1,6 +1,11 @@
 sources:
+  IFS_4.4-FESOM_5-cycle3:
+    description: main 4.4km Cycle 3 experiment, coupled with FESOM 5km
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3.yaml"
   tco2559-ng5-cycle3:
-    description: main 4.4km experiment, coupled with FESOM 5km
+    description: (deprecated) main 4.4km Cycle 3 experiment, coupled with FESOM 5km
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3.yaml"
