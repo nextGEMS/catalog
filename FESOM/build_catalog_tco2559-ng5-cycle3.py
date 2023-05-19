@@ -4,11 +4,13 @@ import yaml
 import intake
 
 # Path to FESOM data
-base_dir = "/work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_"
+base_dirs = ["/work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_",
+"/work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_"]
+
 out_catalog_name = "tco2559-ng5-cycle3.yaml"
 # Dictionary to map variables to their sources
 variable_sources = {
-    "2d_vertices_daily": [
+    "2D_daily_native": [
         "atmice_x",
         "atmice_y",
         "atmoce_x",
@@ -18,40 +20,35 @@ variable_sources = {
         "MLD1",
         "MLD2",
         "prec",
-        "runoff",
         "ssh",
         "uice",
         "vice",
+        'fw'
     ],
-    "2d_vertices_hourly": [
+    "2D_1h_native": [
         "a_ice",
         "evap",
         "fh",
-        "fv",
         "sss",
         "sst",
     ],
-    "2d_elements_monthly": ["tx_sur", "ty_sur"],
-    "3d_vertices_nz1_daily": ["salt", "temp"],
-    "3d_vertices_nz1-upper_3hourly": ["salt_upper", "temp_upper"],
-    "3d_vertices_nz_daily": ["Kv", "w"],
-    "3d_vertices_nz-upper_3hourly": ["w_upper"],
-    "3d_elements_nz1_daily": ["u", "v"],
-    "3d_elements_nz1-upper_3hourly": ["u_upper", "v_upper"],
-    "3d_elements_nz_daily": ["Av"],
+    "2D_monthly_native": ["tx_sur", "ty_sur", "runoff"],
+    "3D_daily_native": ["salt", "temp","Kv", "w", "u", "v", "Av"],
+    "3D_3h_native": ["salt_upper", "temp_upper", "w_upper", "u_upper", "v_upper"],
 }
 
 chunks = {
-    "2d_vertices_daily": {"time": 1, "nod2": -1},
-    "2d_vertices_hourly": {"time": 1, "nod2": -1},
-    "2d_elements_monthly": {"time": 1, "elem": -1},
-    "3d_vertices_nz1_daily": {"time": 1, "nod2": -1, "nz1": -1},
-    "3d_vertices_nz1-upper_3hourly": {"time": 1, "nod2": -1, "nz1_upper": -1},
-    "3d_vertices_nz_daily": {"time": 1, "nod2": -1, "nz": -1},
-    "3d_vertices_nz-upper_3hourly": {"time": 1, "nod2": -1, "nz_upper": -1},
-    "3d_elements_nz1_daily": {"time": 1, "elem": -1, "nz1": -1},
-    "3d_elements_nz1-upper_3hourly": {"time": 1, "elem": -1, "nz1_upper": -1},
-    "3d_elements_nz_daily": {"time": 1, "elem": -1, "nz": -1},
+    "2D_daily_native": {"time": 1, "nod2": -1},
+    "2D_1h_native": {"time": 1, "nod2": -1},
+    "2D_monthly_native": {"time": 1, "elem": -1},
+
+    "3D_daily_native": {"time": 1, "nod2": -1, "elem": -1, "nz1": -1, 'nz': -1},
+    "3D_3h_native": {"time": 1, "nod2": -1, "nz1_upper": -1, "nz_upper": -1},
+    # "3d_vertices_nz_daily": {"time": 1, "nod2": -1, "nz": -1},
+    # "3d_vertices_nz-upper_3hourly": {"time": 1, "nod2": -1, "nz_upper": -1},
+    # "3d_elements_nz1_daily": {"time": 1, "elem": -1, "nz1": -1},
+    # "3d_elements_nz1-upper_3hourly": {"time": 1, "elem": -1, "nz1_upper": -1},
+    # "3d_elements_nz_daily": {"time": 1, "elem": -1, "nz": -1},
 }
 
 # Fixed catalog entries
@@ -84,22 +81,23 @@ fixed_catalog_entries = {
 def create_intake_catalog():
     # base_dir = "Cycle3_"
     catalog_entries = {}
-
-    for year in range(2020, 2022):
-        for month in range(1, 13):
-            directory = f"{base_dir}{month:02d}{year}"
-            if os.path.exists(directory):
-                for nc_file in glob.glob(f"{directory}/*.nc"):
-                    file_name = os.path.basename(nc_file)
-                    source = extract_source(file_name)
-                    if source:
-                        if source not in catalog_entries:
-                            catalog_entries[source] = {
-                                "driver": "netcdf",
-                                "args": {"urlpath": [], "chunks": chunks[source]},
-                                "metadata": {"source": source},
-                            }
-                        catalog_entries[source]["args"]["urlpath"].append(nc_file)
+    
+    for base_dir in base_dirs:
+        for year in range(2020, 2024):
+            for month in range(1, 13):
+                directory = f"{base_dir}{month:02d}{year}"
+                if os.path.exists(directory):
+                    for nc_file in glob.glob(f"{directory}/*.nc"):
+                        file_name = os.path.basename(nc_file)
+                        source = extract_source(file_name)
+                        if source:
+                            if source not in catalog_entries:
+                                catalog_entries[source] = {
+                                    "driver": "netcdf",
+                                    "args": {"urlpath": [], "chunks": chunks[source]},
+                                    "metadata": {"source": source},
+                                }
+                            catalog_entries[source]["args"]["urlpath"].append(nc_file)
 
     # Merge fixed_catalog_entries with generated catalog_entries
     fixed_catalog_entries["sources"].update(catalog_entries)
