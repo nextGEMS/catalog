@@ -4,6 +4,16 @@ plugins:
     - module: gribscan
 
 sources:
+  2D_monthly_native:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_native/json.dir/atm2d.json
+  3D_monthly_native:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_native/json.dir/atm3d.json
   2D_monthly_0.25deg:
     driver: zarr    
     args:
