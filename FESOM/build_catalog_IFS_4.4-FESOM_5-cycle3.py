@@ -83,7 +83,7 @@ def create_intake_catalog():
     catalog_entries = {}
     
     for base_dir in base_dirs:
-        for year in range(2020, 2024):
+        for year in range(2020, 2025):
             for month in range(1, 13):
                 directory = f"{base_dir}{month:02d}{year}"
                 if os.path.exists(directory):
