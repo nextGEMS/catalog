@@ -1,3 +1,7 @@
+plugins:
+  source:
+  - module: intake_xarray
+sources:
   native4.4_grid:
     driver: netcdf
     args:
