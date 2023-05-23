@@ -9,8 +9,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco1279-orca025-cycle3.yaml"
-  tco2559-ng5-cycle3:
-    description: (deprecated) main 4.4km Cycle 3 experiment, coupled with FESOM 5km
+  IFS_grids:
+    description: grid and area files for IFS Cycle 3 experiments
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3.yaml"
+        path: "{{CATALOG_DIR}}/tco-grids-cycle3.yaml"
