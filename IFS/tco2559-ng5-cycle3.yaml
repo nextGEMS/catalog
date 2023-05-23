@@ -30,7 +30,9 @@ sources:
     driver: zarr
     args:
       consolidated: False
-      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg/json.dir/atm2d.json
+      urlpath: 
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg/json.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg_p2/json.dir/atm2d.json
   3D_monthly_1deg:
     driver: zarr
     args:
