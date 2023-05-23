@@ -47,6 +47,10 @@ sources:
     driver: netcdf
     args:
       urlpath: /work/bm1235/ifs-grids/tco_grids/tco2559_grid.nc
+  native_gridarea:
+    driver: netcdf
+    args:
+      urlpath: /work/bm1235/ifs-grids/tco_grids/tco2559_gridarea.nc    
   0.25deg_grid:
     driver: netcdf
     args:
