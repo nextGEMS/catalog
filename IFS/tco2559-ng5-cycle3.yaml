@@ -42,20 +42,3 @@ sources:
     args:
       consolidated: False
       urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h_wam/json.dir/atm2d.json
-      
-  native_grid:
-    driver: netcdf
-    args:
-      urlpath: /work/bm1235/ifs-grids/tco_grids/tco2559_grid.nc
-  native_gridarea:
-    driver: netcdf
-    args:
-      urlpath: /work/bm1235/ifs-grids/tco_grids/tco2559_gridarea.nc    
-  0.25deg_grid:
-    driver: netcdf
-    args:
-      urlpath: /work/bm1235/ifs-grids/multio_grids_cdoPython/0.25_griddes.nc
-  0.25deg_gridarea:
-    driver: netcdf
-    args:
-      urlpath: /work/bm1235/ifs-grids/multio_grids_cdoPython/0.25_gridarea.nc     
