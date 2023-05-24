@@ -21,12 +21,36 @@ sources:
       - /work/bm1344/AWI/Cycle3/test/u_upper_2020_12.zarr
       - /work/bm1344/AWI/Cycle3/test/v_upper_2020_12.zarr
       - /work/bm1344/AWI/Cycle3/test/w_upper_2020_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_12.zarr
       - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_10.zarr
       - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_10.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_10.zarr
       - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_11.zarr
       - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_11.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_11.zarr
       - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_12.zarr
       - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_12.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_12.zarr
     driver: zarr
   3D_daily_native_zarr:
     args:
@@ -44,6 +68,9 @@ sources:
       - /work/bm1344/AWI/Cycle3/test/w_2021.zarr
       - /work/bm1344/AWI/Cycle3/test/temp_2022.zarr
       - /work/bm1344/AWI/Cycle3/test/salt_2022.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_2022.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_2022.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_2022.zarr
       - /work/bm1344/AWI/Cycle3/test/temp_2023.zarr
       - /work/bm1344/AWI/Cycle3/test/salt_2023.zarr
       - /work/bm1344/AWI/Cycle3/test/u_2023.zarr
@@ -51,6 +78,9 @@ sources:
       - /work/bm1344/AWI/Cycle3/test/w_2023.zarr
       - /work/bm1344/AWI/Cycle3/test/temp_2024.zarr
       - /work/bm1344/AWI/Cycle3/test/salt_2024.zarr
+      - /work/bm1344/AWI/Cycle3/test/u_2024.zarr
+      - /work/bm1344/AWI/Cycle3/test/v_2024.zarr
+      - /work/bm1344/AWI/Cycle3/test/w_2024.zarr
     driver: zarr
   elem_grid:
     args:
