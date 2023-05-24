@@ -787,9 +787,6 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_daily_native/vice/vice_2024-10.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_daily_native/vice/vice_2024-11.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_daily_native/vice/vice_2024-12.nc
-      concat_dim: time
-      chunks: {}
-    metadata: {}
   2D_1h_0.25deg:
     description: 2D_1h_0.25deg data
     driver: netcdf
@@ -846,11 +843,17 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-01.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-02.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-03.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-04.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-05.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-06.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-07.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-08.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-09.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-10.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-11.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/a_ice/a_ice_2024-12.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/evap/evap_2020-01.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/evap/evap_2020-02.nc
-      concat_dim: time
-      chunks: {}
-    metadata: {}
   2D_monthly_0.25deg:
     description: 2D_monthly_0.25deg data
     driver: netcdf
@@ -904,9 +907,6 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_monthly_native/runoff/runoff_2023-10.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_monthly_native/runoff/runoff_2023-11.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_monthly_native/runoff/runoff_2023-12.nc
-      concat_dim: time
-      chunks: {}
-    metadata: {}
   2D_daily_1deg:
     description: 2D_daily_1deg data
     driver: netcdf
@@ -1692,9 +1692,6 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_daily_native/vice/vice_2024-10.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_daily_native/vice/vice_2024-11.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_daily_native/vice/vice_2024-12.nc
-      concat_dim: time
-      chunks: {}
-    metadata: {}
   2D_1h_1deg:
     description: 2D_1h_1deg data
     driver: netcdf
@@ -1811,6 +1808,15 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-01.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-02.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-03.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-04.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-05.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-06.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-07.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-08.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-09.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-10.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-11.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/evap/evap_2024-12.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2020-01.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2020-02.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2020-03.nc
@@ -1859,6 +1865,18 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2023-10.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2023-11.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2023-12.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-01.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-02.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-03.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-04.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-05.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-06.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-07.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-08.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-09.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-10.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-11.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/fh/fh_2024-12.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2020-01.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2020-02.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2020-03.nc
@@ -1907,6 +1925,18 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2023-10.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2023-11.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2023-12.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-01.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-02.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-03.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-04.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-05.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-06.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-07.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-08.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-09.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-10.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-11.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sss/sss_2024-12.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2020-01.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2020-02.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2020-03.nc
@@ -1935,9 +1965,9 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2022-02.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2022-03.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2022-04.nc
-      concat_dim: time
-      chunks: {}
-    metadata: {}
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2022-05.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2022-06.nc
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/sst/sst_2022-07.nc
   2D_monthly_1deg:
     description: 2D_monthly_1deg data
     driver: netcdf
@@ -1991,6 +2021,3 @@ sources:
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_monthly_native/runoff/runoff_2023-10.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_monthly_native/runoff/runoff_2023-11.nc
       - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_monthly_native/runoff/runoff_2023-12.nc
-      concat_dim: time
-      chunks: {}
-    metadata: {}

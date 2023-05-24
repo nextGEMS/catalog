@@ -33,10 +33,9 @@ for path in dir_paths:
             "driver": "netcdf",
             "args": {
                 "urlpath": sorted(netcdf_files),
-                "concat_dim": "time",
-                "chunks": {},
+                # "concat_dim": "time",
+                # "chunks": {},
             },
-            "metadata": {},
         }
 
 # write the catalog to a yaml file
