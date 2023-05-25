@@ -8,12 +8,16 @@ sources:
     driver: zarr
     args:
       consolidated: False
-      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm2d.json
+      urlpath:
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native_p2/json.dir/atm2d.json
   3D_1h6h_native:
     driver: zarr
     args:
       consolidated: False
-      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm3d.json
+      urlpath:
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native_p2/json.dir/atm3d.json  
 
   2D_monthly_0.25deg:
     driver: zarr
