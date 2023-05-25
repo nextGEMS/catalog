@@ -18,7 +18,7 @@ def create_intake_catalog(years, variables_daily, variables_hourly, directory):
     for year in years:
         for month in range(1, 13):
             for var in variables_hourly:
-                file_path = os.path.join(directory, f'{var}_{year}_{month}.zarr')
+                file_path = os.path.join(directory, f'{var}_{year}_{str(month).zfill(2)}.zarr')
                 if os.path.exists(file_path):
                     urlpath_hourly.append(file_path)
                 
