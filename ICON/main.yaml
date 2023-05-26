@@ -1,3 +1,6 @@
+plugins:
+  source:
+  - module: intake_xarray
 sources:
   ngc3028:
     args:
@@ -31,3 +34,8 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+  HAMOCC:
+    description: Bonus 10km ICON/HAMOCC simulation
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/HAMOCC.yaml"
