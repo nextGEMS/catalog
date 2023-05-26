@@ -1,0 +1,50 @@
+sources: 
+  HEALPix:
+    description: 10km ICON/HAMOCC interpolated to HEALPix grid
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: /work/bm1255/m300689/hackathon_hamocc/healpix/HAMOCC_zoom{{ zoom }}.zarr
+    driver: zarr
+    parameters:
+      zoom:
+        allowed:
+          - 9
+          - 8
+          - 7
+          - 6
+          - 5
+          - 4
+          - 3
+          - 2
+          - 1
+          - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+  OneDegree:
+    description: 10km ICON/HAMOCC interpolated to regular 1-degree grid
+    driver: netcdf
+    args:
+      urlpath:
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__conc_zos_mld_slp__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__FreshFluxes__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_2d__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_3d_bacfa_remin_aou__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_3d_delsil_delcar_denit__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_3d_DIC_ALK_DOC_DET__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_3d_nutrients__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_3d_o2_hion_n2o__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_EU_npp_export__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__hamocc_EU_phyp_phydiaz__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__heat_content__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__HeatFluxes__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__rho__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__rhopot__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__rsdoabsorb__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__so__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__swrab_mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__u__mergetime.nc
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__w__mergetime.nc 
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__to__mergetime.nc 
+      - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__v__mergetime.nc 
