@@ -2,6 +2,14 @@ plugins:
   source:
   - module: intake_xarray
 sources:
+  data_inventory:
+    args:
+      csv_kwargs:
+        keep_default_na: false
+      urlpath: '{{ CATALOG_DIR }}/inventory.csv'
+    description: "FESOM data inventory"
+    driver: intake.source.csv.CSVSource
+    metadata: {}
   2D_1h_0.25deg:
     args:
       urlpath:
