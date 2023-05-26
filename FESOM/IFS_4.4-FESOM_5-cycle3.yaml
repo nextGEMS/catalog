@@ -17,6 +17,7 @@ sources:
         nod2: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/evap.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/sss.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/a_ice.fesom.2020.nc
@@ -326,6 +327,7 @@ sources:
         nod2: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/atmoce_y.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/MLD1.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/m_ice.fesom.2020.nc
@@ -1115,6 +1117,7 @@ sources:
         elem: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/runoff.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/ty_sur.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/tx_sur.fesom.2020.nc
@@ -1306,6 +1309,7 @@ sources:
         nz_upper: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/w_upper.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/v_upper.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/temp_upper.fesom.2020.nc
@@ -1618,6 +1622,7 @@ sources:
         nz1: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/Av.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/u.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/temp.fesom.2020.nc

@@ -7,6 +7,8 @@ import intake
 base_dirs = ["/work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_",
 "/work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_"]
 
+minimal_mesh = "/work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc"
+
 out_catalog_name = "IFS_4.4-FESOM_5-cycle3.yaml"
 # Dictionary to map variables to their sources
 variable_sources = {
@@ -97,6 +99,7 @@ def create_intake_catalog():
                                     "args": {"urlpath": [], "chunks": chunks[source]},
                                     "metadata": {"source": source},
                                 }
+                                catalog_entries[source]["args"]["urlpath"].append(minimal_mesh)
                             catalog_entries[source]["args"]["urlpath"].append(nc_file)
 
     # Merge fixed_catalog_entries with generated catalog_entries
