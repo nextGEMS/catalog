@@ -2,14 +2,6 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  data_inventory:
-    args:
-      csv_kwargs:
-        keep_default_na: false
-      urlpath: '{{ CATALOG_DIR }}/inventory.csv'
-    description: "FESOM data inventory"
-    driver: intake.source.csv.CSVSource
-    metadata: {}
   2D_1h_0.25deg:
     args:
       urlpath:
@@ -28,6 +20,7 @@ sources:
         nod2: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/evap.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/sss.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/a_ice.fesom.2020.nc
@@ -349,6 +342,7 @@ sources:
         nod2: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/atmoce_y.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/MLD1.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/m_ice.fesom.2020.nc
@@ -1150,6 +1144,7 @@ sources:
         elem: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/runoff.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/ty_sur.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/tx_sur.fesom.2020.nc
@@ -1333,7 +1328,319 @@ sources:
     driver: netcdf
     metadata:
       source: 2D_monthly_native
-  3D_1h_native_zarr:
+  3D_3h_native:
+    args:
+      chunks:
+        nod2: -1
+        nz1_upper: -1
+        nz_upper: -1
+        time: 1
+      urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/w_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/v_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/temp_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/u_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/salt_upper.fesom.2020.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/u_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/salt_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/temp_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/w_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/v_upper.fesom.2021.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/salt_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/v_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/u_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/temp_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/w_upper.fesom.2022.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/v_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/salt_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/w_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/u_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/temp_upper.fesom.2023.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/v_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/u_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/w_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/salt_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/temp_upper.fesom.2024.nc
+      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/v_upper.fesom.2024.nc
+    driver: netcdf
+    metadata:
+      source: 3D_3h_native
+  3D_3h_native_zarr:
     args:
       consolidated: true
       urlpath:
@@ -1638,317 +1945,6 @@ sources:
       - /work/bm1344/AWI/Cycle3/test/v_upper_2024_12.zarr
       - /work/bm1344/AWI/Cycle3/test/w_upper_2024_12.zarr
     driver: zarr
-  3D_3h_native:
-    args:
-      chunks:
-        nod2: -1
-        nz1_upper: -1
-        nz_upper: -1
-        time: 1
-      urlpath:
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/w_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/v_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/temp_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/u_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122020/salt_upper.fesom.2020.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/u_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/salt_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/temp_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/w_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122021/v_upper.fesom.2021.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/salt_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/v_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/u_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/temp_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122022/w_upper.fesom.2022.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/v_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/salt_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/w_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/u_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122023/temp_upper.fesom.2023.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_022024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_032024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_042024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_052024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_062024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_072024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_082024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_092024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_102024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_112024/v_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/u_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/w_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/salt_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/temp_upper.fesom.2024.nc
-      - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/v_upper.fesom.2024.nc
-    driver: netcdf
-    metadata:
-      source: 3D_3h_native
   3D_daily_native:
     args:
       chunks:
@@ -1958,6 +1954,7 @@ sources:
         nz1: -1
         time: 1
       urlpath:
+      - /work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/Av.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/u.fesom.2020.nc
       - /work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_012020/temp.fesom.2020.nc
@@ -2427,6 +2424,14 @@ sources:
         decode_times: true
     description: 3D Monthly Data on 1 degree grid
     driver: netcdf
+  data_inventory:
+    args:
+      csv_kwargs:
+        keep_default_na: false
+      urlpath: '{{ CATALOG_DIR }}/inventory.csv'
+    description: FESOM data inventory
+    driver: intake.source.csv.CSVSource
+    metadata: {}
   elem_grid:
     args:
       urlpath: /work/bm1235/a270046/meshes/NG5_griddes_elems_IFS.nc

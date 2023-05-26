@@ -36,7 +36,7 @@ def create_intake_catalog(years, variables_daily, variables_hourly, directory):
                     'urlpath': urlpath_daily
                 }
             },
-            '3D_1h_native_zarr': {
+            '3D_3h_native_zarr': {
                 'driver': 'zarr',
                 'args': {
                     'consolidated': True,
