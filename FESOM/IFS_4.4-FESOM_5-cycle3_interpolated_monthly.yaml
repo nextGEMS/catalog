@@ -1,0 +1,21 @@
+plugins:
+  source:
+  - module: intake_xarray
+
+sources:
+  3D_monthly_0.25deg:
+    description: '3D Monthly Data on 0.25 degree grid'
+    driver: netcdf
+    args:
+      urlpath: '/work/bm1344/AWI/Cycle3/test/monthly_means/025/*/*.nc'
+      xarray_kwargs:
+        decode_times: true
+        combine: 'by_coords'
+  3D_monthly_1deg:
+    description: '3D Monthly Data on 1 degree grid'
+    driver: netcdf
+    args:
+      urlpath: '/work/bm1344/AWI/Cycle3/test/monthly_means/100/*/*.nc'
+      xarray_kwargs:
+        decode_times: true
+        combine: 'by_coords'
