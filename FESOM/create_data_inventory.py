@@ -7,6 +7,8 @@ fcat = intake.open_catalog("combined_catalog.yaml")
 sources_dict = {}
 
 for source in fcat.keys():
+    if source == "data_inventory":
+        continue
     try:
         ds = fcat[source].to_dask()
     except Exception as ex:
