@@ -23,7 +23,7 @@ sources:
     description: 28km Cycle 3 experiment, coupled with FESOM 25km
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/tco399-orca025-cycle3.yaml"
+        path: "{{CATALOG_DIR}}/tco399-forca025-cycle3.yaml"
   IFS_grids:
     description: grid and area files for IFS Cycle 3 experiments
     driver: yaml_file_cat
