@@ -1,12 +1,3 @@
-# Sources:
-# - node_grid: grid for vertices (also known as nods)
-# - elem_grid: grid for elements (also known as triangles)
-# - 2D_daily_native: runoff
-# - 2D_1h_native: a_ice, atmice_x, atmice_y, atmoce_x, atmoce_y, evap, fh, sss, sst, m_ice, m_snow, MLD1, MLD2, prec, ssh, uice, vice, fw
-# - 2D_monthly_native: momix_length, tx_sur, ty_sur
-# - 3D_daily_native: salt, temp, Kv, w, u, v, Av
-# - 3D_3h_native: salt_upper, temp_upper, w_upper, u_upper, v_upper
-
 plugins:
   source:
   - module: intake_xarray
@@ -116,11 +107,7 @@ sources:
         nod2: -1
         time: 1
       urlpath:
-      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/runoff.fesom.2020.nc
-      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/runoff.fesom.2021.nc
-      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/runoff.fesom.2022.nc
-      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/runoff.fesom.2023.nc
-      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/runoff.fesom.2024.nc
+      - /work/bm1344/AWI/Cycle3/IFS_28-FESOM_25-cycle3/daily_means/*/*.nc
     driver: netcdf
     metadata:
       source: 2D_daily_native
