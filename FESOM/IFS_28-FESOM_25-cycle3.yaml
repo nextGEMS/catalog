@@ -1,0 +1,241 @@
+# Sources:
+# - node_grid: grid for vertices (also known as nods)
+# - elem_grid: grid for elements (also known as triangles)
+# - 2D_daily_native: runoff
+# - 2D_1h_native: a_ice, atmice_x, atmice_y, atmoce_x, atmoce_y, evap, fh, sss, sst, m_ice, m_snow, MLD1, MLD2, prec, ssh, uice, vice, fw
+# - 2D_monthly_native: momix_length, tx_sur, ty_sur
+# - 3D_daily_native: salt, temp, Kv, w, u, v, Av
+# - 3D_3h_native: salt_upper, temp_upper, w_upper, u_upper, v_upper
+
+plugins:
+  source:
+  - module: intake_xarray
+sources:
+  2D_1h_native:
+    args:
+      chunks:
+        nod2: -1
+        time: 1
+      urlpath:
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/atmoce_y.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/MLD1.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/m_ice.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/prec.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/m_snow.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/evap.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/atmice_x.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/fw.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/uice.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/vice.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/atmoce_x.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/sss.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/a_ice.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/sst.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/atmice_y.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/ssh.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/MLD2.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/fh.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/evap.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/a_ice.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/atmice_x.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/atmoce_x.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/fw.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/uice.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/m_snow.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/sst.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/atmoce_y.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/MLD2.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/sss.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/fh.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/atmice_y.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/prec.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/m_ice.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/ssh.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/MLD1.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/vice.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/ssh.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/prec.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/a_ice.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/evap.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/atmice_y.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/sss.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/vice.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/m_ice.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/fw.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/MLD1.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/uice.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/sst.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/fh.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/atmice_x.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/MLD2.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/atmoce_y.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/atmoce_x.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/m_snow.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/MLD2.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/m_snow.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/sss.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/ssh.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/sst.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/m_ice.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/vice.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/atmoce_y.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/atmoce_x.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/a_ice.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/uice.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/atmice_y.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/MLD1.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/prec.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/evap.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/fh.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/fw.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/atmice_x.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/evap.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/sst.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/sss.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/atmoce_x.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/MLD2.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/atmoce_y.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/fw.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/prec.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/atmice_x.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/vice.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/fh.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/ssh.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/uice.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/m_snow.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/atmice_y.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/MLD1.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/m_ice.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/a_ice.fesom.2024.nc
+    driver: netcdf
+    metadata:
+      source: 2D_1h_native
+  2D_daily_native:
+    args:
+      chunks:
+        nod2: -1
+        time: 1
+      urlpath:
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/runoff.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/runoff.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/runoff.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/runoff.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/runoff.fesom.2024.nc
+    driver: netcdf
+    metadata:
+      source: 2D_daily_native
+  2D_monthly_native:
+    args:
+      chunks:
+        elem: -1
+        time: 1
+      urlpath:
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/ty_sur.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/momix_length.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/tx_sur.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/tx_sur.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/ty_sur.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/momix_length.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/tx_sur.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/ty_sur.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/momix_length.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/tx_sur.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/ty_sur.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/momix_length.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/tx_sur.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/ty_sur.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/momix_length.fesom.2024.nc
+    driver: netcdf
+    metadata:
+      source: 2D_monthly_native
+  3D_3h_native:
+    args:
+      chunks:
+        nod2: -1
+        nz1_upper: -1
+        nz_upper: -1
+        time: 1
+      urlpath:
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/w_upper.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/v_upper.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/temp_upper.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/u_upper.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/salt_upper.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/u_upper.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/salt_upper.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/temp_upper.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/w_upper.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/v_upper.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/salt_upper.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/v_upper.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/u_upper.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/temp_upper.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/w_upper.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/v_upper.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/salt_upper.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/w_upper.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/u_upper.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/temp_upper.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/u_upper.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/w_upper.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/salt_upper.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/temp_upper.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/v_upper.fesom.2024.nc
+    driver: netcdf
+    metadata:
+      source: 3D_3h_native
+  3D_daily_native:
+    args:
+      chunks:
+        elem: -1
+        nod2: -1
+        nz: -1
+        nz1: -1
+        time: 1
+      urlpath:
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/Av.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/u.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/temp.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/salt.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/Kv.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/w.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2020/v.fesom.2020.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/salt.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/Av.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/w.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/Kv.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/u.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/v.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2021/temp.fesom.2021.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/w.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/Av.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/temp.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/Kv.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/u.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/salt.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2022/v.fesom.2022.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/Av.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/w.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/Kv.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/temp.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/salt.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/u.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2023/v.fesom.2023.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/Av.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/w.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/u.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/Kv.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/v.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/temp.fesom.2024.nc
+      - /work/bm1235/b381679/IFS_cycle3/28km_fesom/rundir/Cycle3_2024/salt.fesom.2024.nc
+    driver: netcdf
+    metadata:
+      source: 3D_daily_native
+  elem_grid:
+    args:
+      urlpath: /pool/data/AWICM/FESOM2/MESHES_FESOM2.1/orca25/orca25_griddes_elements_IFS.nc
+    driver: netcdf
+  node_grid:
+    args:
+      urlpath: /pool/data/AWICM/FESOM2/MESHES_FESOM2.1/orca25/orca25_griddes_nodes_IFS.nc
+    driver: netcdf
