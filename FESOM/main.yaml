@@ -9,4 +9,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/IFS_28-FESOM_25-cycle3.yaml"
-
+  IFS_9-FESOM_5-cycle3:
+    description: 9km Cycle 3 experiment, coupled with FESOM 5km
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/IFS_9-FESOM_5-cycle3.yaml"      

@@ -5,13 +5,12 @@ import intake
 
 # Path to FESOM data
 base_dirs = [
-    "/work/bm1235/a270046/cycle3/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_",
-    "/work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_",
+    "/work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_"
 ]
 
 minimal_mesh = "/work/bm1344/AWI/Cycle3/experimental_grid/fesom_ng5.nc"
 
-out_catalog_name = "IFS_4.4-FESOM_5-cycle3.yaml"
+out_catalog_name = "../IFS_9-FESOM_5-cycle3.yaml"
 # Dictionary to map variables to their sources
 variable_sources = {
     "2D_daily_native": [
@@ -86,7 +85,7 @@ def create_intake_catalog():
     catalog_entries = {}
 
     for base_dir in base_dirs:
-        for year in range(2020, 2025):
+        for year in range(2020, 2021):
             for month in range(1, 13):
                 directory = f"{base_dir}{month:02d}{year}"
                 if os.path.exists(directory):
