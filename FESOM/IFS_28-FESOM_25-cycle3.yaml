@@ -101,6 +101,26 @@ sources:
     driver: netcdf
     metadata:
       source: 2D_1h_native
+  2D_daily_0.25deg:
+    args:
+      chunks:
+        nod2: -1
+        time: 1
+      urlpath:
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_28-FESOM_25-cycle3/025/2D_daily_native/*/*.nc
+    driver: netcdf
+    metadata:
+      source: 2D_daily_native
+  2D_daily_1deg:
+    args:
+      chunks:
+        nod2: -1
+        time: 1
+      urlpath:
+      - /work/bm1344/AWI/Cycle3/FESOM/IFS_28-FESOM_25-cycle3/100/2D_daily_native/*/*.nc
+    driver: netcdf
+    metadata:
+      source: 2D_daily_native
   2D_daily_native:
     args:
       chunks:
@@ -218,6 +238,28 @@ sources:
     driver: netcdf
     metadata:
       source: 3D_daily_native
+  3D_monthly_0.25deg:
+    args:
+      chunks:
+        elem: -1
+        nod2: -1
+        time: 1
+      urlpath:
+      - /work/bm1344/AWI/Cycle3/IFS_28-FESOM_25-cycle3/monthly_means/025/*/*.nc
+    driver: netcdf
+    metadata:
+      source: 3D_monthly_native
+  3D_monthly_1deg:
+    args:
+      chunks:
+        elem: -1
+        nod2: -1
+        time: 1
+      urlpath:
+      - /work/bm1344/AWI/Cycle3/IFS_28-FESOM_25-cycle3/monthly_means/100/*/*.nc
+    driver: netcdf
+    metadata:
+      source: 3D_monthly_native
   elem_grid:
     args:
       urlpath: /pool/data/AWICM/FESOM2/MESHES_FESOM2.1/orca25/orca25_griddes_elements_IFS.nc
