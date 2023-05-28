@@ -26,7 +26,17 @@ sources:
       urlpath:
       - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm3d.json
       - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native_p2/json.dir/atm3d.json  
-
+  2D_monthly_native:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_native/json.dir.9999/atm2d.json
+  3D_monthly_native:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_native/json.dir.9999/atm3d.json
+      
   2D_monthly_0.25deg:
     driver: zarr
     args:
@@ -41,6 +51,16 @@ sources:
       urlpath: 
       - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg/json.dir/atm3d.json
       - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg_p2/json.dir.job/atm3d.json  
+  2D_1h_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_0.25deg/json.dir.9999/atm2d.json
+  3D_1h6h_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_0.25deg/json.dir.9999/atm3d.json
 
   2D_monthly_1deg:
     driver: zarr
@@ -56,6 +76,16 @@ sources:
       urlpath: 
       - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg/json.dir/atm3d.json
       - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg_p2/json.dir/atm3d.json  
+  2D_1h_1deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_1deg/json.dir.9999/atm2d.json
+  3D_1h6h_1deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_1deg/json.dir.9999/atm3d.json
 
   WAM_1h_native:
     driver: zarr
