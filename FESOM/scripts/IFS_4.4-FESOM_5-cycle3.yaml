@@ -1,19 +1,16 @@
+# Sources:
+# - node_grid: grid for vertices (also known as nods)
+# - elem_grid: grid for elements (also known as triangles)
+# - 2D_daily_native: atmice_x, atmice_y, atmoce_x, atmoce_y, m_ice, m_snow, MLD1, MLD2, prec, ssh, uice, vice, fw
+# - 2D_1h_native: a_ice, evap, fh, sss, sst
+# - 2D_monthly_native: tx_sur, ty_sur, runoff
+# - 3D_daily_native: salt, temp, Kv, w, u, v, Av
+# - 3D_3h_native: salt_upper, temp_upper, w_upper, u_upper, v_upper
+
 plugins:
   source:
   - module: intake_xarray
 sources:
-  2D_1h_0.25deg:
-    args:
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_1h_native/*/*.nc
-    description: 2D_1h_0.25deg data
-    driver: netcdf
-  2D_1h_1deg:
-    args:
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_1h_native/*/*.nc
-    description: 2D_1h_1deg data
-    driver: netcdf
   2D_1h_native:
     args:
       chunks:
@@ -324,18 +321,6 @@ sources:
     driver: netcdf
     metadata:
       source: 2D_1h_native
-  2D_daily_0.25deg:
-    args:
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_daily_native/*/*.nc
-    description: 2D_daily_0.25deg data
-    driver: netcdf
-  2D_daily_1deg:
-    args:
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_daily_native/*/*.nc
-    description: 2D_daily_1deg data
-    driver: netcdf
   2D_daily_native:
     args:
       chunks:
@@ -1126,18 +1111,6 @@ sources:
     driver: netcdf
     metadata:
       source: 2D_daily_native
-  2D_monthly_0.25deg:
-    args:
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/025/2D_monthly_native/*/*.nc
-    description: 2D_monthly_0.25deg data
-    driver: netcdf
-  2D_monthly_1deg:
-    args:
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/FESOM/IFS_4.4-FESOM_5-cycle3/100/2D_monthly_native/*/*.nc
-    description: 2D_monthly_1deg data
-    driver: netcdf
   2D_monthly_native:
     args:
       chunks:
@@ -1640,311 +1613,6 @@ sources:
     driver: netcdf
     metadata:
       source: 3D_3h_native
-  3D_3h_native_zarr:
-    args:
-      consolidated: true
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2020_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2020_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2020_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2020_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2020_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2021_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2021_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2021_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2021_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2021_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2022_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2022_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2022_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2022_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2022_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2023_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2023_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2023_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2023_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2023_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_01.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_02.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_03.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_04.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_05.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_06.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_07.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_08.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_09.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_10.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_11.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_upper_2024_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_upper_2024_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_upper_2024_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_upper_2024_12.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_upper_2024_12.zarr
-    driver: zarr
   3D_daily_native:
     args:
       chunks:
@@ -2378,60 +2046,6 @@ sources:
     driver: netcdf
     metadata:
       source: 3D_daily_native
-  3D_daily_native_zarr:
-    args:
-      consolidated: true
-      urlpath:
-      - /work/bm1344/AWI/Cycle3/test/temp_2020.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_2020.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_2020.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_2020.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_2020.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_2021.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_2021.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_2021.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_2021.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_2021.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_2022.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_2022.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_2022.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_2022.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_2022.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_2023.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_2023.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_2023.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_2023.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_2023.zarr
-      - /work/bm1344/AWI/Cycle3/test/temp_2024.zarr
-      - /work/bm1344/AWI/Cycle3/test/salt_2024.zarr
-      - /work/bm1344/AWI/Cycle3/test/u_2024.zarr
-      - /work/bm1344/AWI/Cycle3/test/v_2024.zarr
-      - /work/bm1344/AWI/Cycle3/test/w_2024.zarr
-    driver: zarr
-  3D_monthly_0.25deg:
-    args:
-      urlpath: /work/bm1344/AWI/Cycle3/test/monthly_means/025/*/*.nc
-      xarray_kwargs:
-        combine: by_coords
-        decode_times: true
-    description: 3D Monthly Data on 0.25 degree grid
-    driver: netcdf
-  3D_monthly_1deg:
-    args:
-      urlpath: /work/bm1344/AWI/Cycle3/test/monthly_means/100/*/*.nc
-      xarray_kwargs:
-        combine: by_coords
-        decode_times: true
-    description: 3D Monthly Data on 1 degree grid
-    driver: netcdf
-  data_inventory:
-    args:
-      csv_kwargs:
-        keep_default_na: false
-      urlpath: '{{ CATALOG_DIR }}/inventory.csv'
-    description: FESOM data inventory
-    driver: intake.source.csv.CSVSource
-    metadata: {}
   elem_grid:
     args:
       urlpath: /work/bm1235/a270046/meshes/NG5_griddes_elems_IFS.nc
