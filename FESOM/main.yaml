@@ -14,3 +14,11 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/IFS_9-FESOM_5-cycle3.yaml"      
+  FESOM_13_tropo_age_interpolated:
+    description: FESOM forced experiment with age tracer, interpolated data
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/FESOM_13_tropo_age_interpolated.yaml"
+              
+
+
