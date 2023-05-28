@@ -24,6 +24,11 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco399-forca025-cycle3.yaml"
+  IFS_4.4-FESOM_5-cycle3-fastdata:
+    description: (experimental copy) 4.4km Cycle 3 experiment, coupled with FESOM 5km
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3-fastdata.yaml"      
   IFS_grids:
     description: grid and area files for IFS Cycle 3 experiments
     driver: yaml_file_cat
