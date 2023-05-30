@@ -3,7 +3,7 @@ sources:
     description: main 4.4km Cycle 3 experiment, coupled with FESOM 5km
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3-fastdata.yaml"
+        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3.yaml"
   IFS_9-FESOM_5-cycle3:
     description: 9km Cycle 3 experiment, coupled with FESOM 5km
     driver: yaml_file_cat
@@ -25,10 +25,15 @@ sources:
     args:
         path: "{{CATALOG_DIR}}/tco399-forca025-cycle3.yaml"
   IFS_4.4-FESOM_5-cycle3-nofastdata:
-    description: do not use original 4.4km Cycle 3 experiment, coupled with FESOM 5km; use 'IFS_4.4-FESOM_5-cycle3' as long as it works 
+    description: standard 4.4km Cycle 3 experiment, coupled with FESOM 5km; use 'IFS_4.4-FESOM_5-cycle3-fastdata' as long as it works 
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3.yaml"      
+        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3.yaml"
+  IFS_4.4-FESOM_5-cycle3-fastdata:
+    description: experimental faster 4.4km Cycle 3 experiment, coupled with FESOM 5km 
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3-fastdata.yaml"      
   IFS_grids:
     description: grid and area files for IFS Cycle 3 experiments
     driver: yaml_file_cat
