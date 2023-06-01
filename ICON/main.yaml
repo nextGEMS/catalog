@@ -33,7 +33,7 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
-  ngc3026:
+  ngc3026_WILL_BE_DELETED:
     args:
       chunks: null
       consolidated: true
