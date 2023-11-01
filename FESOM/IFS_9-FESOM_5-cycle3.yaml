@@ -1,12 +1,3 @@
-# Sources:
-# - node_grid: grid for vertices (also known as nods)
-# - elem_grid: grid for elements (also known as triangles)
-# - 2D_daily_native: atmice_x, atmice_y, atmoce_x, atmoce_y, m_ice, m_snow, MLD1, MLD2, prec, ssh, uice, vice, fw
-# - 2D_1h_native: a_ice, evap, fh, sss, sst
-# - 2D_monthly_native: tx_sur, ty_sur, runoff
-# - 3D_daily_native: salt, temp, Kv, w, u, v, Av
-# - 3D_3h_native: salt_upper, temp_upper, w_upper, u_upper, v_upper
-
 plugins:
   source:
   - module: intake_xarray
@@ -63,9 +54,23 @@ sources:
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/a_ice.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/sst.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/fh.fesom.2020.nc
-    driver: netcdf
+    driver:
+    - netcdf
     metadata:
-      source: 2D_1h_native
+      variable-long_names:
+      - ice concentration
+      - evaporation
+      - heat flux
+      - area of grid cell
+      - sea surface salinity
+      - sea surface temperature
+      variables:
+      - a_ice
+      - evap
+      - fh
+      - node_area
+      - sss
+      - sst
   2D_daily_native:
     args:
       chunks:
@@ -190,9 +195,39 @@ sources:
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/atmice_y.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/ssh.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/MLD2.fesom.2020.nc
-    driver: netcdf
+    driver:
+    - netcdf
     metadata:
-      source: 2D_daily_native
+      variable-long_names:
+      - Mixed Layer Depth
+      - Mixed Layer Depth
+      - stress atmice x
+      - stress atmice y
+      - stress atmoce x
+      - stress atmoce y
+      - fresh water flux
+      - ice height
+      - snow height
+      - area of grid cell
+      - precipitation rain
+      - sea surface elevation
+      - ice velocity x
+      - ice velocity y
+      variables:
+      - MLD1
+      - MLD2
+      - atmice_x
+      - atmice_y
+      - atmoce_x
+      - atmoce_y
+      - fw
+      - m_ice
+      - m_snow
+      - node_area
+      - prec
+      - ssh
+      - uice
+      - vice
   2D_monthly_native:
     args:
       chunks:
@@ -227,9 +262,19 @@ sources:
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/runoff.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/ty_sur.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/tx_sur.fesom.2020.nc
-    driver: netcdf
+    driver:
+    - netcdf
     metadata:
-      source: 2D_monthly_native
+      variable-long_names:
+      - area of grid cell
+      - river runoff
+      - zonal wind str. to ocean
+      - meridional wind str. to ocean
+      variables:
+      - node_area
+      - runoff
+      - tx_sur
+      - ty_sur
   3D_3h_native:
     args:
       chunks:
@@ -284,9 +329,23 @@ sources:
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/temp_upper.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/u_upper.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/salt_upper.fesom.2020.nc
-    driver: netcdf
+    driver:
+    - netcdf
     metadata:
-      source: 3D_3h_native
+      variable-long_names:
+      - area of grid cell
+      - salinity
+      - temperature
+      - zonal velocity
+      - meridional velocity
+      - vertical velocity
+      variables:
+      - node_area
+      - salt_upper
+      - temp_upper
+      - u_upper
+      - v_upper
+      - w_upper
   3D_daily_native:
     args:
       chunks:
@@ -360,14 +419,71 @@ sources:
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/Kv.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/w.fesom.2020.nc
       - /work/bm1235/b381679/IFS_cycle3/9km_fesom/rundir/Cycle3_112020/v.fesom.2020.nc
-    driver: netcdf
+    driver:
+    - netcdf
     metadata:
-      source: 3D_daily_native
+      variable-long_names:
+      - vertical viscosity Av
+      - vertical diffusivity Kv
+      - area of grid cell
+      - salinity
+      - temperature
+      - zonal velocity
+      - meridional velocity
+      - vertical velocity
+      variables:
+      - Av
+      - Kv
+      - node_area
+      - salt
+      - temp
+      - u
+      - v
+      - w
   elem_grid:
     args:
       urlpath: /work/bm1235/a270046/meshes/NG5_griddes_elems_IFS.nc
-    driver: netcdf
+    driver:
+    - netcdf
+    metadata:
+      variable-long_names:
+      - grid dimensions
+      - land sea mask
+      - area of grid cell
+      - Indicates which other nodes neighbour each node.
+      - Maps every triangular face to its three corner nodes.
+      - 'Indicates coastal triangles: coast=1, internal=0'
+      variables:
+      - grid_dims
+      - grid_imask
+      - cell_area
+      - node_node_links
+      - triag_nodes
+      - coast
   node_grid:
     args:
       urlpath: /work/bm1235/a270046/meshes/NG5_griddes_nodes_IFS.nc
-    driver: netcdf
+    driver:
+    - netcdf
+    metadata:
+      variable-long_names:
+      - grid dimensions
+      - land sea mask
+      - area of grid cell
+      - Indicates which other nodes neighbour each node.
+      - Maps every triangular face to its three corner nodes.
+      - 'Indicates coastal nodes: coast=1, internal=0'
+      - depth of model levels in metres (positive downwards)
+      - depth of model level bounds in metres (positive downwards)
+      - depth in terms of number of active levels beneath each ocean surface grid
+        point
+      variables:
+      - grid_dims
+      - grid_imask
+      - cell_area
+      - node_node_links
+      - triag_nodes
+      - coast
+      - depth
+      - depth_bnds
+      - depth_lev
