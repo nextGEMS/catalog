@@ -34,6 +34,11 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_cycle4
+      source_id: ICON-ESM
+      simulation_id: ngc4006
   ngc4005:
     args:
       chunks: null
@@ -69,6 +74,11 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_cycle4
+      source_id: ICON-ESM
+      simulation_id: ngc4005
   ngc3028:
     args:
       chunks: null
@@ -100,6 +110,11 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_cycle3
+      source_id: ICON-ESM
+      simulation_id: ngc3028
   ngc3028_bc_land:
     description: Land surface properties used as input in ngc3028
     args:
@@ -108,6 +123,11 @@ sources:
       urlpath: /fastdata/ka1081/nextgems_cycle3/ngc3028/ngc3028_bc_land.zarr
       use_cftime: true
     driver: zarr
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_cycle3
+      source_id: ICON-ESM
+      simulation_id: ngc3028
   ngc3026_WILL_BE_DELETED:
     args:
       chunks: null
@@ -139,6 +159,11 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_cycle3
+      source_id: ICON-ESM
+      simulation_id: ngc3026
   HAMOCC:
     description: Bonus 10km ICON/HAMOCC simulation
     driver: yaml_file_cat
