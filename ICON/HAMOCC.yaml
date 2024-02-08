@@ -22,6 +22,7 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+    metadata:
       project: nextGEMS
       experiment_id: nextgems_cycle3
       source_id: ICON-ESM
@@ -52,6 +53,7 @@ sources:
       - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__w__mergetime.nc 
       - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__to__mergetime.nc 
       - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__v__mergetime.nc 
+    metadata:
       project: nextGEMS
       experiment_id: nextgems_cycle3
       source_id: ICON-ESM
