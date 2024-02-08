@@ -44,8 +44,11 @@ sources:
     parameters:
       time:
         allowed:
+        - PT15M
         - PT30M
+        - PT1H
         - PT3H
+        - PT6H
         - P1D
         default: P1D
         description: time resolution of the dataset
