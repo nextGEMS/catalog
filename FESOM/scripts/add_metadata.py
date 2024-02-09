@@ -64,7 +64,6 @@ for source in fcat.keys():
 
 # Save the updated catalog to a new YAML file
 new_catalog = {
-    'plugins': {'source': [{'module': 'intake_xarray'}]},
     'sources': new_sources_dict
 }
 

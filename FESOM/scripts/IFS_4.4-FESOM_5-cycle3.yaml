@@ -7,9 +7,6 @@
 # - 3D_daily_native: salt, temp, Kv, w, u, v, Av
 # - 3D_3h_native: salt_upper, temp_upper, w_upper, u_upper, v_upper
 
-plugins:
-  source:
-  - module: intake_xarray
 sources:
   2D_1h_native:
     args:

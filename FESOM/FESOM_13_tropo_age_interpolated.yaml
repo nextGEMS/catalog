@@ -1,7 +1,3 @@
-plugins:
-  source:
-  - module: intake_xarray
-
 sources:
   2D_1h_0.1deg:
     description: 2D variables from FESOM tropo (13km) interpolated to 0.1deg. Only tropical Atlantic.    
