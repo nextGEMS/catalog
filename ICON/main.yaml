@@ -169,6 +169,16 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/HAMOCC.yaml"
+  erc1011:
+    description: EERIE Cycle 1 control run
+    driver: yaml_file_cat
+    args:
+      path: "https://raw.githubusercontent.com/eerie-project/intake_catalogues/main/dkrz/disk/model-output/icon-esm-er/eerie-control-1950/main.yaml"
+  erc1017:
+    description: EERIE Cycle 1 historical run
+    driver: yaml_file_cat
+    args:
+      path: "https://raw.githubusercontent.com/eerie-project/intake_catalogues/main/dkrz/disk/model-output/icon-esm-er/eerie-spinup-1950/main.yaml"
   slow:
     description: slow disk catalog (use as backup)
     driver: yaml_file_cat
