@@ -14,10 +14,10 @@ sources:
     description: IFS model output
     driver: yaml_file_cat
     args:
-        path: "https://raw.githubusercontent.com/nextGEMS/catalog/main/IFS/main.yaml"
+        path: "{{CATALOG_DIR}}/IFS/main.yaml"
   FESOM:
     description: FESOM ocean model output
     driver: yaml_file_cat
     args:
-        path: "https://raw.githubusercontent.com/nextGEMS/catalog/main/FESOM/main.yaml"
+        path: "{{CATALOG_DIR}}/FESOM/main.yaml"
         
