@@ -9,6 +9,7 @@ sources:
     args:
       consolidated: False
       urlpath: reference::/work/bm1235/a270046/cycle4/gribscan_monthly_0.25deg/json.dir/atm2d.json
+      drop_variables: ['sst', 'ci'] # missing value problem in first 10 years
   3D_monthly_0.25deg:
     driver: zarr
     args:
