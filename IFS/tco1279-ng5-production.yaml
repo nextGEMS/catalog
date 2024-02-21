@@ -1,0 +1,16 @@
+plugins:
+  source:
+    - module: intake_xarray
+    - module: gribscan
+
+sources:
+  2D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle4/gribscan_monthly_0.25deg/json.dir/atm2d.json
+  3D_monthly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle4/gribscan_monthly_0.25deg/json.dir/atm3d.json
