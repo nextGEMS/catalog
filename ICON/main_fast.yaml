@@ -33,6 +33,11 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_cycle3
+      source_id: ICON-ESM
+      simulation_id: ngc3028
   HAMOCC:
     description: Bonus 10km ICON/HAMOCC simulation
     driver: yaml_file_cat
