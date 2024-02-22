@@ -1,8 +1,3 @@
-plugins:
-  source:
-    - module: intake_xarray
-    - module: gribscan
-
 sources:
   2D_monthly_0.25deg:
     driver: zarr    
