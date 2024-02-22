@@ -1,0 +1,1232 @@
+sources:
+  atm_2d_1h_inst:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/atm_2d_1h_inst/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l30735 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1hour
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      grid_id: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: 2d
+      member_id: r1i1p1f1
+      number_of_grid_used: 15
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: atm
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 125219
+      time_min: -1
+      time_reduction: inst
+      title: ICON simulation
+      uuidOfHGrid: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      variable-long_names:
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - dew point temperature in 2m
+      - surface pressure
+      - mean sea level pressure
+      - 10m windspeed
+      - fraction of ocean covered by sea ice
+      - sea ice thickness
+      - temperature in 2m
+      - surface temperature
+      - zonal wind in 10m
+      - meridional wind in 10m
+    parameters:
+      variables:
+        allowed:
+        - cell_sea_land_mask
+        - dew2
+        - ps
+        - psl
+        - sfcwind
+        - sic
+        - sit
+        - tas
+        - ts
+        - uas
+        - vas
+        default: cell_sea_land_mask
+        description: All available variables in the dataset
+        type: str
+  atm_2d_1h_mean:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/atm_2d_1h_mean/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l30735 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1hour
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      grid_id: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 15
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: atm
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 125219
+      time_min: -1
+      time_reduction: mean
+      title: ICON simulation
+      uuidOfHGrid: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      variable-long_names:
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - vertically integrated cloud ice
+      - vertically integrated cloud water
+      - latent heat flux
+      - sensible heat flux
+      - precipitation flux
+      - large-scale precipitation flux (snow)
+      - vertically integrated water vapour
+      - vertically integrated graupel
+      - vertically integrated rain
+      - vertically integrated snow
+      - surface downwelling longwave radiation
+      - surface upwelling longwave radiation
+      - toa outgoing longwave radiation
+      - surface downwelling direct near infrared radiation
+      - surface downwelling shortwave radiation
+      - toa incident shortwave radiation
+      - surface upwelling shortwave radiation
+      - toa outgoing shortwave radiation
+      - surface downwelling direct visible radiation
+      - u-momentum flux at the surface
+      - v-momentum flux at the surface
+    parameters:
+      variables:
+        allowed:
+        - cell_sea_land_mask
+        - clivi
+        - cllvi
+        - hfls
+        - hfss
+        - pr
+        - prls
+        - prw
+        - qgvi
+        - qrvi
+        - qsvi
+        - rlds
+        - rlus
+        - rlut
+        - rnds_dir
+        - rsds
+        - rsdt
+        - rsus
+        - rsut
+        - rvds_dir
+        - tauu
+        - tauv
+        default: cell_sea_land_mask
+        description: All available variables in the dataset
+        type: str
+  lnd_2d_1h_inst:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/lnd_2d_1h_inst/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l30735 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1hour
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      grid_id: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 15
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: atm
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 125219
+      time_min: -1
+      time_reduction: inst
+      title: ICON simulation
+      uuidOfHGrid: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      variable-long_names:
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - Density of snow on soil
+    parameters:
+      variables:
+        allowed:
+        - cell_sea_land_mask
+        - hydro_canopy_cond_limited_box
+        - hydro_snow_soil_dens_box
+        - hydro_w_snow_box
+        default: cell_sea_land_mask
+        description: All available variables in the dataset
+        type: str
+  lnd_2d_1h_mean:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/lnd_2d_1h_mean/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l30735 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1hour
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      grid_id: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 15
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: atm
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 125219
+      time_min: -1
+      time_reduction: mean
+      title: ICON simulation
+      uuidOfHGrid: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      variable-long_names:
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - discharge to the ocean
+      - drainage
+      - Surface runoff
+      - Transpiration from surface
+      - Ground heat flux (old)
+    parameters:
+      variables:
+        allowed:
+        - cell_sea_land_mask
+        - hydro_discharge_ocean_box
+        - hydro_drainage_box
+        - hydro_runoff_box
+        - hydro_transpiration_box
+        - sse_grnd_hflx_old_box
+        default: cell_sea_land_mask
+        description: All available variables in the dataset
+        type: str
+  lnd_tl_3h_inst:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/lnd_tl_3h_inst/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l30735 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 3hour
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      grid_id: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 15
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: atm
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 125099
+      time_min: -1
+      time_reduction: inst
+      title: ICON simulation
+      uuidOfHGrid: 0f1e7d66-637e-11e8-913b-51232bb4d8f9
+      variable-long_names:
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+    parameters:
+      variables:
+        allowed:
+        - cell_sea_land_mask
+        - hydro_w_soil_sl_box
+        - soil_depth_energy_bnds
+        - soil_depth_water_bnds
+        - sse_t_soil_sl_box
+        default: cell_sea_land_mask
+        description: All available variables in the dataset
+        type: str
+  ngc_72lev_HAM_prod_atm_mon:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/ngc_72lev_HAM_prod_atm_mon/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l30735 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_id: not implemented
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: atm
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 128159
+      time_min: -1
+      time_reduction: mean
+      title: ICON simulation
+      variable-long_names:
+      - global mean evaporation flux
+      - mean surface freshwater flux over ocean surface
+      - global mean precipitation flux
+      - global mean toa total radiation
+      - global mean toa outgoing longwave radiation
+      - global mean toa incident shortwave radiation
+      - global mean toa outgoing shortwave radiation
+      - global mean temperature at 2m
+    parameters:
+      variables:
+        allowed:
+        - evap_gmean
+        - fwfoce_gmean
+        - prec_gmean
+        - radtop_gmean
+        - rlut_gmean
+        - rsdt_gmean
+        - rsut_gmean
+        - tas_gmean
+        default: evap_gmean
+        description: All available variables in the dataset
+        type: str
+  ngc_72lev_HAM_prod_oce_mon:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/ngc_72lev_HAM_prod_oce_mon/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_id: not implemented
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 165599
+      time_min: 1439
+      time_reduction: mean
+      title: ICON simulation
+      variable-long_names:
+      - FrshFlux_Evaporation_global
+      - FrshFlux_Precipitation
+      - FrshFlux_Runoff
+      - FrshFlux_SnowFall_global
+      - FrshFlux_TotalIce
+      - FrshFlux_TotalOcean
+      - FrshFlux_VolumeIce
+      - FrshFlux_VolumeTotal
+      - HeatFlux_Total
+      - amoc26n
+      - global_heat_content
+      - global_heat_content_solid
+      - ice_extent_nh
+      - ice_extent_sh
+      - ice_volume_nh
+      - ice_volume_sh
+      - kin_energy
+      - pot_energy
+      - potential_enstrophy
+      - ssh_global
+      - global mean sea surface salinity
+      - global mean sea surface temperature
+      - total_energy
+      - total_salt
+      - total_saltinliquidwater
+      - total_saltinseaice
+      - totalsnowfall
+    parameters:
+      variables:
+        allowed:
+        - FrshFlux_Evaporation_global
+        - FrshFlux_Precipitation_global
+        - FrshFlux_Runoff_global
+        - FrshFlux_SnowFall_global
+        - FrshFlux_TotalIce_global
+        - FrshFlux_TotalOcean_global
+        - FrshFlux_VolumeIce_global
+        - FrshFlux_VolumeTotal_global
+        - HeatFlux_Total_global
+        - amoc26n
+        - global_heat_content
+        - global_heat_content_solid
+        - ice_extent_nh
+        - ice_extent_sh
+        - ice_volume_nh
+        - ice_volume_sh
+        - kin_energy_global
+        - pot_energy_global
+        - potential_enstrophy_global
+        - ssh_global
+        - sss_global
+        - sst_global
+        - total_energy_global
+        - total_salt
+        - total_saltinliquidwater
+        - total_saltinseaice
+        - totalsnowfall_global
+        default: FrshFlux_Evaporation_global
+        description: All available variables in the dataset
+        type: str
+  obgc_2d_P1DM:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_2d_P1DM/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0016/icon_grid_0016_R02B09_O.nc
+      grid_id: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 16
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 527039
+      time_min: 1439
+      time_reduction: mean
+      title: ICON simulation
+      uuidOfHGrid: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      variable-long_names:
+      - Calc flux at 90 m
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - co2 flux (positive upward)
+      - OM flux at 90 m
+      - o2 flux
+      - Opal flux at 90 m
+      - co2 ocean partical pressure
+    parameters:
+      variables:
+        allowed:
+        - calex90
+        - cell_sea_land_mask
+        - co2flux
+        - coex90
+        - o2flux
+        - opex90
+        - pco2
+        default: calex90
+        description: All available variables in the dataset
+        type: str
+  obgc_3d_EU_P1DM:
+    args:
+      chunks: auto
+      combine_attrs: drop_conflicts
+      compat: override
+      consolidated: false
+      coords: minimal
+      data_vars: minimal
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath:
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_remin/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_no3/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_hi/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_det/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_talk/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_dissic/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_delcar/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_phydiaz/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_phyp/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_dissoc/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_delsil/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_o2/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_wpoc/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_po4/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_aou/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_NPP/combined.parq        
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0016/icon_grid_0016_R02B09_O.nc
+      grid_id: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 16
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 165599
+      time_min: 1439
+      time_reduction: mean
+      title: ICON simulation
+      uuidOfHGrid: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      variable-long_names:
+      - apparent O2 utilisation
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - calcium carbonate production
+      - opal production
+      - POC concentration
+      - DIC concentration
+      - DOC concentration
+      - hydrogen ion concentration
+      - Nitrate concentration
+      - oxygen concentration
+      - cyanobacteria concentration
+      - phytoplankton concentration
+      - phosphate concentration
+      - aerob detritus remineralization
+      - alkalinity
+      - detrius sinking speed
+    parameters:
+      variables:
+        allowed:
+        - aou
+        - cell_sea_land_mask
+        - delcar
+        - delsil
+        - det
+        - dissic
+        - dissoc
+        - hi
+        - no3
+        - o2
+        - phydiaz
+        - phyp
+        - po4
+        - remin
+        - talk
+        - wpoc
+        default: aou
+        description: All available variables in the dataset
+        type: str
+  obgc_3d_EU_diag_P15DM:
+    args:
+      chunks: auto
+      combine_attrs: drop_conflicts
+      compat: override
+      consolidated: false
+      coords: minimal
+      data_vars: minimal
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath:
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_o2/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_dissoc/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_dissic/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_det/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 15day
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0016/icon_grid_0016_R02B09_O.nc
+      grid_id: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 16
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 527039
+      time_min: 21599
+      time_reduction: mean
+      title: ICON simulation
+      uri: /work/mh0287/m300805/code/ICON/nextgems_cycle3/experiments/ngc_72lev_HAM_prod/work/run_20200116T000000-20200130T235920/ngc_72lev_HAM_prod_obgc_3d_EU_diag_P15DM_dissic_20200131T000000Z.nc
+      uuidOfHGrid: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      variable-long_names:
+      - DIC. tend. impl. diff.
+      - DIC tend. total
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - product of DIC and zonal velocity
+      - product of DIC and meridiornal velocity
+      - product of DIC and vertical velocity
+      - DOC. tend. impl. diff.
+      - doc tend. total
+      - product of DOC and zonal velocity
+      - product of DOC and meridiornal velocity
+      - product of DOC and vertical velocity
+      - OXY. tend. impl. diff.
+      - oxy. tend. total
+      - product of oxygen and zonal velocity
+      - product of oxygen and meridiornal velocity
+      - product of oxygen and vertical velocity
+      - POC. tend. impl. diff.
+      - poc tend. total
+      - product of POC and zonal velocity
+      - product of POC and meridiornal velocity
+      - product of POC and vertical velocity
+    parameters:
+      variables:
+        allowed:
+        - Tdic_idf
+        - Tdic_tot
+        - cell_sea_land_mask
+        - udic
+        - vdic
+        - wdic
+        - Tdoc_idf
+        - Tdoc_tot
+        - udoc
+        - vdoc
+        - wdoc
+        - Toxy_idf
+        - Toxy_tot
+        - uoxy
+        - voxy
+        - woxy
+        - Tpoc_idf
+        - Tpoc_tot
+        - upoc
+        - vpoc
+        - wpoc
+        default: Tdic_idf
+        description: All available variables in the dataset
+        type: str
+  obgc_3d_P15DM_o2:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_P15DM_o2/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 15day
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0016/icon_grid_0016_R02B09_O.nc
+      grid_id: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 16
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 527039
+      time_min: 21599
+      time_reduction: mean
+      title: ICON simulation
+      uri: /work/mh0287/m300805/code/ICON/nextgems_cycle3/experiments/ngc_72lev_HAM_prod/work/run_20200116T000000-20200130T235920/ngc_72lev_HAM_prod_obgc_3d_P15DM_o2_20200131T000000Z.nc
+      uuidOfHGrid: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      variable-long_names:
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - oxygen concentration
+    parameters:
+      variables:
+        allowed:
+        - cell_sea_land_mask
+        - o2
+        default: cell_sea_land_mask
+        description: All available variables in the dataset
+        type: str
+  obgc_monitor:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_monitor/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_id: not implemented
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 165599
+      time_min: 1439
+      time_reduction: mean
+      title: ICON simulation
+      variable-long_names:
+      - global N2 fixation
+      - global watern column denitrification
+      - global_om_export_at_1000m
+      - global_om_export_at_2000m
+      - global_om_export_at_90m
+      - global caco3 production
+      - global_calc_export_at_90m
+      - global net_co2_flux
+      - global annual primary production of cyanobacteria
+      - global_opal_export_at_90m
+      - global opal production
+      - global net_npp
+      - global_surface_alkalinity
+      - global_surface_dissolved_inorganic_carbon
+      - global_surface_nitrate
+      - global_surface_phosphate
+      - global_surface_silicate
+    parameters:
+      variables:
+        allowed:
+        - N2_fixation
+        - WC_denit
+        - global_OM_export_at_1000m
+        - global_OM_export_at_2000m
+        - global_OM_export_at_90m
+        - global_caco3_production
+        - global_calc_export_at_90m
+        - global_net_co2_flux
+        - global_npp_cya
+        - global_opal_export_at_90m
+        - global_opal_production
+        - global_primary_production
+        - global_surface_alk
+        - global_surface_dic
+        - global_surface_nitrate
+        - global_surface_phosphate
+        - global_surface_silicate
+        default: N2_fixation
+        description: All available variables in the dataset
+        type: str
+  oce_2d_1d_mean:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_2d_1d_mean/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0016/icon_grid_0016_R02B09_O.nc
+      grid_id: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: 2d
+      member_id: r1i1p1f1
+      number_of_grid_used: 16
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 165599
+      time_min: 1439
+      time_reduction: mean
+      title: ICON simulation
+      uuidOfHGrid: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      variable-long_names:
+      - Conductive heat flux at ice-ocean interface
+      - Energy flux available for surface melting
+      - Wind Speed at 10m height
+      - atmos_fluxes_FrshFlux_Evaporation
+      - atmos_fluxes_FrshFlux_Precipitation
+      - atmos_fluxes_FrshFlux_Runoff
+      - atmos_fluxes_FrshFlux_SnowFall
+      - atmos_fluxes_HeatFlux_Latent
+      - atmos_fluxes_HeatFlux_LongWave
+      - atmos_fluxes_HeatFlux_Sensible
+      - atmos_fluxes_HeatFlux_ShortWave
+      - atmos_fluxes_HeatFlux_Total
+      - atmos_fluxes_stress_x
+      - atmos_fluxes_stress_xw
+      - atmos_fluxes_stress_y
+      - atmos_fluxes_stress_yw
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - ice concentration in each ice class
+      - heat_content_seaice
+      - heat_conten_snow
+      - heat_content_total
+      - ice thickness
+      - snow thickness
+      - zonal velocity
+      - meridional velocity
+      - ocean_mixed_layer_thickness_defined_by_sigma_t
+      - Sea Level Pressure
+      - zstar surface stretch at cell center
+      - vertically integrated mass flux at edges
+      - zstar sfc elevation at cell center
+    parameters:
+      variables:
+        allowed:
+        - Qbot
+        - Qtop
+        - Wind_Speed_10m
+        - atmos_fluxes_FrshFlux_Evaporation
+        - atmos_fluxes_FrshFlux_Precipitation
+        - atmos_fluxes_FrshFlux_Runoff
+        - atmos_fluxes_FrshFlux_SnowFall
+        - atmos_fluxes_HeatFlux_Latent
+        - atmos_fluxes_HeatFlux_LongWave
+        - atmos_fluxes_HeatFlux_Sensible
+        - atmos_fluxes_HeatFlux_ShortWave
+        - atmos_fluxes_HeatFlux_Total
+        - atmos_fluxes_stress_x
+        - atmos_fluxes_stress_xw
+        - atmos_fluxes_stress_y
+        - atmos_fluxes_stress_yw
+        - cell_sea_land_mask
+        - conc
+        - heat_content_seaice
+        - heat_content_snow
+        - heat_content_total
+        - hi
+        - hs
+        - ice_u
+        - ice_v
+        - mlotst
+        - sea_level_pressure
+        - stretch_c
+        - verticallyTotal_mass_flux_e
+        - zos
+        default: Qbot
+        description: All available variables in the dataset
+        type: str
+  oce_3d_EU_P15DM_diag:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_3d_EU_P15DM_diag/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 15day
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0016/icon_grid_0016_R02B09_O.nc
+      grid_id: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 16
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 527039
+      time_min: 21599
+      time_reduction: mean
+      title: ICON simulation
+      uri: /work/mh0287/m300805/code/ICON/nextgems_cycle3/experiments/ngc_72lev_HAM_prod/work/run_20200116T000000-20200130T235920/ngc_72lev_HAM_prod_oce_3d_EU_P15DM_diag_20200131T000000Z.nc
+      uuidOfHGrid: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      variable-long_names:
+      - square of density
+      - square of salinity
+      - square of temperature
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - product of fw flux and density
+      - product of net heatflux and density
+      - density anomaly
+      - product of x windstress and u-velocity
+      - product of y windstress and v-velocity
+      - product of zonal velocity and density
+      - product of zonal velocity and salinity
+      - product of zonal velocity and temperature
+      - square of zonal velocity
+      - product of zonal velocity and meridional velocity
+      - product of zonal velocity and vertical velocity
+      - product of meridional velocity and density
+      - product of meridional velocity and salinity
+      - product of meridional velocity and temperature
+      - square of meridional velocity
+      - product of meridional velocity and vertical velocity
+      - product of vertical velocity and density
+      - product of vertical velocity and salinity
+      - product of vertical velocity and temperature
+      - vertical velocity at prism center
+      - square of vertical velocity
+    parameters:
+      variables:
+        allowed:
+        - RR
+        - SS
+        - TT
+        - cell_sea_land_mask
+        - fwR
+        - hflR
+        - sigma0
+        - tauxu
+        - tauyv
+        - uR
+        - uS
+        - uT
+        - uu
+        - uv
+        - uw
+        - vR
+        - vS
+        - vT
+        - vv
+        - vw
+        - wR
+        - wS
+        - wT
+        - w_prismcenter
+        - ww
+        default: RR
+        description: All available variables in the dataset
+        type: str
+  oce_ml_1d_mean:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_ml_1d_mean/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_file_uri: http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0016/icon_grid_0016_R02B09_O.nc
+      grid_id: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      number_of_grid_used: 16
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 165599
+      time_min: 1439
+      time_reduction: mean
+      title: ICON simulation
+      uuidOfHGrid: 375cb0cc-637e-11e8-9d6f-8f41a9b9ff4b
+      variable-long_names:
+      - sea water potential temperature(A_tracer_v)
+      - sea (-2 inner, -1 boundary) land (2 inner, 1 boundary) mask for the cell
+      - potential density
+      - sea water salinity
+      - turbulent kinetic energy
+      - sea water potential temperature
+      - u zonal velocity component
+      - v meridional velocity component
+      - vertical velocity at cells
+    parameters:
+      variables:
+        allowed:
+        - A_tracer_v_to
+        - cell_sea_land_mask
+        - rhopot
+        - so
+        - tke
+        - to
+        - u
+        - v
+        - w
+        default: A_tracer_v_to
+        description: All available variables in the dataset
+        type: str
+  oce_moc_1d_mean:
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+        remote_protocol: file
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_moc_1d_mean/combined.parq
+    driver: zarr
+    metadata:
+      CDI: Climate Data Interface version 2.2.0 (https://mpimet.mpg.de/cdi)
+      Conventions: CF-1.6
+      activity_id: C4MIP
+      comment: Fatemeh Chegini (m300805) on l40347 (Linux 4.18.0-372.32.1.el8_6.x86_64
+        x86_64)
+      experiment: coupled-climate-carbon-cycle
+      experiment_id: nextgems_cycle3
+      format: netcdf
+      frequency: 1day
+      grid_id: not implemented
+      grid_label: gn
+      history: deleted for convenience
+      institution: Max Planck Institute for Meteorology/Deutscher Wetterdienst
+      institution_id: MPI-M
+      level_type: ml
+      member_id: r1i1p1f1
+      project: nextGEMS
+      project_id: nextGEMS
+      realm: oce
+      references: see MPIM/DWD publications
+      simulation_id: ngc3542
+      source: git@gitlab.dkrz.de:icon/icon-mpim.git@e2bd9f1c8546609deac7bc0489372d12abc5de2a
+      source_id: ICON-ESM
+      source_type: AOGCM
+      time_max: 165599
+      time_min: 1439
+      time_reduction: mean
+      title: ICON simulation
+      variable-long_names:
+      - atlantic northward ocean heat transport
+      - atlantic implied heat transport
+      - atlantic meridional overturning
+      - atlantic northward ocean salt transport
+      - atlantic implied freshwater transport
+      - global northward ocean heat transport
+      - global implied heat transport
+      - global meridional overturning
+      - global northward ocean salt transport
+      - global implied freshwater transport
+      - indopacific northward ocean heat transport
+      - indopacific implied heat transport
+      - indopacific meridional overturning
+      - indopacific northward ocean salt transport
+      - indopacific implied freshwater transport
+    parameters:
+      variables:
+        allowed:
+        - atlantic_hfbasin
+        - atlantic_hfl
+        - atlantic_moc
+        - atlantic_sltbasin
+        - atlantic_wfl
+        - global_hfbasin
+        - global_hfl
+        - global_moc
+        - global_sltbasin
+        - global_wfl
+        - pacific_hfbasin
+        - pacific_hfl
+        - pacific_moc
+        - pacific_sltbasin
+        - pacific_wfl
+        default: atlantic_hfbasin
+        description: All available variables in the dataset
+        type: str
