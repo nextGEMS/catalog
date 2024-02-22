@@ -1,4 +1,9 @@
 sources:
+  IFS_9-FESOM_5-production:
+    description: main 9km scenario (SSP3-7.0), coupled with FESOM 5km
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco1279-ng5-production.yaml"
   IFS_4.4-FESOM_5-cycle3:
     description: main 4.4km Cycle 3 experiment, coupled with FESOM 5km
     driver: yaml_file_cat
