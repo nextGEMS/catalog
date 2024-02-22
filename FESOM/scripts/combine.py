@@ -39,11 +39,8 @@ combined_sources = {
     **data_inventory,
 }
 
-# Define the plugins
-plugins = {"source": [{"module": "intake_xarray"}]}
-
 # Prepare the combined catalog
-combined_catalog = {"plugins": plugins, "sources": combined_sources}
+combined_catalog = {"sources": combined_sources}
 
 # Write the combined catalog to a new YAML file
 with open("../IFS_4.4-FESOM_5-cycle3.yaml", "w") as file:
