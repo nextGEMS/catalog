@@ -1,4 +1,41 @@
 sources:
+  ngc4008:
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: /work/bm1235/k203123/nextgems_prefinal/experiments/ngc4008/outdata/ngc4008_{{
+        time }}_{{ zoom }}.zarr
+    driver: zarr
+    parameters:
+      time:
+        allowed:
+        - PT15M
+        - PT3H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: ICON-ESM
+      simulation_id: ngc4008
   ngc4006:
     args:
       chunks: null
@@ -33,7 +70,7 @@ sources:
         type: int
     metadata:
       project: nextGEMS
-      experiment_id: nextgems_cycle4
+      experiment_id: nextgems_prefinal
       source_id: ICON-ESM
       simulation_id: ngc4006
   ngc4005:
@@ -73,7 +110,7 @@ sources:
         type: int
     metadata:
       project: nextGEMS
-      experiment_id: nextgems_cycle4
+      experiment_id: nextgems_prefinal
       source_id: ICON-ESM
       simulation_id: ngc4005
   ngc3028:
