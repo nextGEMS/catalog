@@ -62,7 +62,6 @@ def extract_source(file_name):
 
 # Fixed catalog entries
 fixed_catalog_entries = {
-    "plugins": {"source": [{"module": "intake_xarray"}]},
     "sources": {
         "elem_grid": {
             "args": {

@@ -1,6 +1,3 @@
-plugins:
-  source:
-  - module: intake_xarray
 sources:
   2D_1h_0.25deg:
     args:
