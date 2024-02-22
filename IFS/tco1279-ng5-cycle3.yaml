@@ -1,4 +1,12 @@
 sources:
+  data_inventory:
+    args:
+      csv_kwargs:
+        keep_default_na: false
+      urlpath: '{{ CATALOG_DIR }}/inventory_tco1279-ng5-cycle3.csv'
+    description: FESOM data inventory
+    driver: intake.source.csv.CSVSource
+    metadata: {}
   2D_1h_native:
     driver: zarr
     args:
