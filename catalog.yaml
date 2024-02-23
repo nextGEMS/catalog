@@ -4,12 +4,6 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/ICON/main.yaml"
-  ICON_online:
-    description: ICON model output, subset available online
-    driver: yaml_file_cat
-    args:
-        path: "{{CATALOG_DIR}}/ICON/main_online.yaml"
-
   IFS:
     description: IFS model output
     driver: yaml_file_cat
@@ -20,4 +14,3 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/FESOM/main.yaml"
-        
