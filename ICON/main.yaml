@@ -250,13 +250,3 @@ sources:
     driver: yaml_file_cat
     args:
       path: "https://raw.githubusercontent.com/eerie-project/intake_catalogues/main/dkrz/disk/model-output/icon-esm-er/eerie-spinup-1950/main.yaml"
-  slow:
-    description: slow disk catalog (use as backup)
-    driver: yaml_file_cat
-    args:
-      path: "{{CATALOG_DIR}}/main_slow.yaml"
-  fast:
-    description: slow disk catalog (use as backup)
-    driver: yaml_file_cat
-    args:
-      path: "{{CATALOG_DIR}}/main_fast.yaml"
