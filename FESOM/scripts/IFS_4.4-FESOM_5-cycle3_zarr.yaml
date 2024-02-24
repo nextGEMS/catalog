@@ -1,8 +1,5 @@
-plugins:
-  source:
-  - module: intake_xarray
 sources:
-  3D_1h_native_zarr:
+  3D_3h_native_zarr:
     args:
       consolidated: true
       urlpath:

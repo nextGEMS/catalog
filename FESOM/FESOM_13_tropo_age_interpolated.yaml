@@ -1,0 +1,66 @@
+sources:
+  2D_1h_0.1deg:
+    description: 2D variables from FESOM tropo (13km) interpolated to 0.1deg. Only tropical Atlantic.    
+    driver: zarr
+    args:
+      consolidated: False
+      compat: override
+      combine: nested
+      urlpath: 
+      - reference::/work/bm1344/AWI/Cycle3/FESOM_13_tropo_age_interpolated/FESOM_13_tropo_age_interpolated_01_deg_2d.json
+  3D_1h_0.1deg:
+    description: 3D variables from FESOM tropo (13km) interpolated to 0.1deg. Only tropical Atlantic.    
+    driver: zarr
+    args:
+      consolidated: False
+      compat: override
+      combine: nested
+      urlpath: 
+      - reference::/work/bm1344/AWI/Cycle3/FESOM_13_tropo_age_interpolated/FESOM_13_tropo_age_interpolated_01_deg_3d.json
+  2D_1h_0.5deg:
+    description: 2D variables from FESOM tropo (13km) interpolated to 0.5 deg. Global. 
+    driver: zarr
+    args:
+      consolidated: False
+      compat: override
+      combine: nested
+      urlpath: 
+      - reference::/work/bm1344/AWI/Cycle3/FESOM_13_tropo_age_interpolated/FESOM_13_tropo_age_interpolated_05_deg_2d.json
+  3D_1h_0.5deg_full:
+    description: 3D variables on fill layers from FESOM tropo (13km) interpolated to 0.5 deg. Global. 
+    driver: zarr
+    args:
+      consolidated: False
+      compat: override
+      combine: nested
+      urlpath: 
+      - reference::/work/bm1344/AWI/Cycle3/FESOM_13_tropo_age_interpolated/FESOM_13_tropo_age_interpolated_05_deg_3d.json
+  3D_1h_0.5deg_half:
+    description: 3D variables on half layers from FESOM tropo (13km) interpolated to 0.5 deg. Global. 
+    driver: zarr
+    args:
+      consolidated: False
+      compat: override
+      combine: nested
+      urlpath: 
+      - reference::/work/bm1344/AWI/Cycle3/FESOM_13_tropo_age_interpolated/FESOM_13_tropo_age_interpolated_05_deg_3d_interfaces.json
+  # 1h_0.1deg:
+  #   args:
+  #     chunks:
+  #       nod2: -1
+  #       time: 1
+  #     urlpath:
+  #     - /work/mh0287/m300918/Sensitivity_runs_output/FESOM/iage/*.nc
+  #   driver: netcdf
+  #   metadata:
+  #     source: 1h_0.1deg
+  # 1h_0.5deg:
+  #   args:
+  #     chunks:
+  #       nod2: -1
+  #       time: 1
+  #     urlpath:
+  #     - /work/mh0287/m300918/Sensitivity_runs_output/FESOM/iage_glob/*.nc
+  #   driver: netcdf
+  #   metadata:
+  #     source: 1h_0.5deg

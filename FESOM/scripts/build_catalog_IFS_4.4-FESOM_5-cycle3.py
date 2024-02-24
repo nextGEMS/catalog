@@ -66,7 +66,6 @@ def extract_source(file_name):
 
 # Fixed catalog entries
 fixed_catalog_entries = {
-    "plugins": {"source": [{"module": "intake_xarray"}]},
     "sources": {
         "elem_grid": {
             "args": {"urlpath": "/work/bm1235/a270046/meshes/NG5_griddes_elems_IFS.nc"},

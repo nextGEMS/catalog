@@ -23,11 +23,6 @@ def create_intake_catalog(years, variables_daily, variables_hourly, directory):
                     urlpath_hourly.append(file_path)
                 
     catalog_dict = {
-        'plugins': {
-            'source': [
-                {'module': 'intake_xarray'}
-            ]
-        },
         'sources': {
             '3D_daily_native_zarr': {
                 'driver': 'zarr',
@@ -36,7 +31,7 @@ def create_intake_catalog(years, variables_daily, variables_hourly, directory):
                     'urlpath': urlpath_daily
                 }
             },
-            '3D_1h_native_zarr': {
+            '3D_3h_native_zarr': {
                 'driver': 'zarr',
                 'args': {
                     'consolidated': True,
