@@ -6,6 +6,7 @@ sources:
       urlpath: 
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2020/sfc.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2021/sfc.dir/atm2d.json
+      drop_variables: ['sst', 'ci', '10si', '100si']  
   2D_daily_healpix512_ocean:
     driver: zarr
     args:
@@ -43,7 +44,8 @@ sources:
       urlpath:
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2020-2030/sfc.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2030-2034/sfc.dir/atm2d.json
-      - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2035-2039/sfc.dir/atm2d.json 
+      - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2035-2039/sfc.dir/atm2d.json
+      drop_variables: ['sst', 'ci', '10si', '100si']  
   3D_monthly_healpix512:
     driver: zarr
     args:
