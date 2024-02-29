@@ -29,7 +29,17 @@ sources:
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2026/o2d.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2027/o2d.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2028/o2d.dir/atm2d.json
-      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2029/o2d.dir/atm2d.json  
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2029/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2030/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2031/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2032/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2033/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2034/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2035/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2036/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2037/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2038/o2d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2039/o2d.dir/atm2d.json
 
   3D_hourly_healpix512:
     driver: zarr
@@ -52,6 +62,24 @@ sources:
       urlpath: 
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2020/o3d.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2021/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2022/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2023/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2024/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2025/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2026/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2027/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2028/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2029/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2030/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2031/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2032/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2033/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2034/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2035/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2036/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2037/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2038/o3d.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2039/o3d.dir/atm2d.json 
 
   2D_monthly_healpix512:
     driver: zarr
