@@ -156,6 +156,7 @@ sources:
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2030-2034/sfc.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2035-2039/sfc.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2040-2043/sfc.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2044/sfc.dir/atm2d.json  
       drop_variables: ['sst', 'ci', '10si', '100si']
   2D_monthly_healpix512_sst_ci_winds:
     driver: zarr
@@ -187,10 +188,34 @@ sources:
     driver: zarr    
     args:
       consolidated: False
-      urlpath: reference::/work/bm1235/a270046/cycle4/gribscan_monthly_0.25deg/json.dir/atm2d.json
-      drop_variables: ['sst', 'ci'] # missing value problem in first 10 years
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2020-29/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2030-34/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2035-39/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2040-44/sfc.dir/atm2d.json  
+      drop_variables: ['sst', 'ci', '10si', '100si'] # missing value problem in first 10 years
+  2D_monthly_0.25deg_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2020-29/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2030-34/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2035-39/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2040-44/sol.dir/atm2d.json  
+  2D_monthly_0.25deg_sst_ci_winds:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2035-39/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2040-44/sfc.dir/atm2d.json        
   3D_monthly_0.25deg:
     driver: zarr
     args:
       consolidated: False
-      urlpath: reference::/work/bm1235/a270046/cycle4/gribscan_monthly_0.25deg/json.dir/atm3d.json
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2020-29/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2030-34/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2035-39/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4/gribscan_monthly_0.25deg/jsons.2040-44/pl.dir/atm3d.json  
