@@ -155,6 +155,7 @@ sources:
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2020-2030/sfc.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2030-2034/sfc.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2035-2039/sfc.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2040-2043/sfc.dir/atm2d.json
       drop_variables: ['sst', 'ci', '10si', '100si']
   2D_monthly_healpix512_sst_ci_winds:
     driver: zarr
@@ -162,6 +163,7 @@ sources:
       consolidated: False
       urlpath:
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2035-2039/sfc.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2040-2043/sfc.dir/atm2d.json
   3D_monthly_healpix512:
     driver: zarr
     args:
@@ -170,6 +172,7 @@ sources:
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2020-2030/pl.dir/atm3d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2030-2034/pl.dir/atm3d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2035-2039/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2040-2043/pl.dir/atm3d.json
   3D_monthly_healpix512_snow:
     driver: zarr
     args:
@@ -178,6 +181,7 @@ sources:
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2020-2030/sol.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2030-2034/sol.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2035-2039/sol.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_monthly_healpix512/jsons.2040-2043/sol.dir/atm2d.json
 
   2D_monthly_0.25deg:
     driver: zarr    
