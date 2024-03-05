@@ -104,7 +104,7 @@ sources:
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2042/o2d.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2043/o2d.dir/atm2d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2044/o2d.dir/atm2d.json  
-  3D_hourly_healpix512:
+  3D_hourly_healpix512_2020:
     driver: zarr
     args:
       consolidated: False
@@ -114,6 +114,46 @@ sources:
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2022/pl.dir/atm3d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2023/pl.dir/atm3d.json
       - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2024.NEW/pl.dir/atm3d.json
+  3D_hourly_healpix512_2025:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2025/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2026/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2027/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2028/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2029/pl.dir/atm3d.json
+  3D_hourly_healpix512_2030:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2030.NEW/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2031/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2032/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2033/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2034/pl.dir/atm3d.json
+  3D_hourly_healpix512_2035:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2035.NEW/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2036/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2037/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2038/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2039/pl.dir/atm3d.json
+  3D_hourly_healpix512_2040:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2040.NEW/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2041/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2042/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2043/pl.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle4/gribscan_1h1d_2D_healpix512/jsons.2044/pl.dir/atm3d.json
   3D_hourly_healpix512_snow:
     driver: zarr
     args:
