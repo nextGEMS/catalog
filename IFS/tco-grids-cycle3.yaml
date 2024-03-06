@@ -23,3 +23,7 @@ sources:
     driver: netcdf
     args:
       urlpath: /work/bm1235/ifs-grids/multio_grids_cdoPython/0.25_gridarea.nc
+  healpix512_orog:
+    driver: netcdf
+    args:
+      urlpath: /work/bm1235/ifs-grids/prod/z_hpx512_c3.nc
