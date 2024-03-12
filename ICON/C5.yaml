@@ -3,7 +3,7 @@ sources:
     description: ICON-AMIP simulations for the C5 project.
     args:
       urlpath:
-        - "/scratch/m/m300575/LUMI_AMIP_{{ grid }}_{{ experiment }}/LUMI_AMIP_hpz{{ zoom }}_{{ experiment }}_atm_2d_{{ time }}_ml_*.nc"
+        - "/scratch/m/m300575/LUMI_AMIP_{{ grid }}_CNTL/LUMI_AMIP_hpz{{ zoom }}_CNTL_atm_2d_{{ time }}_ml_*.nc"
     driver: netcdf
     parameters:
       grid:
@@ -11,12 +11,6 @@ sources:
           - R02B08
         default: R02B08
         description: original model grid used for computation
-        type: str
-      experiment:
-        allowed:
-          - CNTL
-        default: CNTL
-        description: simulation type
         type: str
       time:
         allowed:
@@ -34,3 +28,5 @@ sources:
     metadata:
       project: Cloud-Circulation Coupling in a Changing Climate (C5)
       source_id: ICON-AMIP
+      experiment_id: AMIP
+      simulation_id: CNTL
