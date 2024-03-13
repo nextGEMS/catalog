@@ -1,6 +1,6 @@
 sources:
-  AMIP:
-    description: ICON-AMIP simulations for the C5 project.
+  AMIP_CNTL:
+    description: ICON-AMIP Control simulation(s) for the C5 project.
     args:
       urlpath:
         - "/scratch/m/m300575/LUMI_AMIP_{{ grid }}_CNTL/LUMI_AMIP_hpz{{ zoom }}_CNTL_atm_2d_{{ time }}_ml_*.nc"
