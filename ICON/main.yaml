@@ -17,7 +17,6 @@ sources:
         type: str
       zoom:
         allowed:
-        - 10
         - 9
         - 8
         - 7
@@ -91,7 +90,6 @@ sources:
         type: str
       zoom:
         allowed:
-        - 10
         - 9
         - 8
         - 7
@@ -128,7 +126,6 @@ sources:
         type: str
       zoom:
         allowed:
-        - 10
         - 9
         - 8
         - 7
@@ -168,7 +165,6 @@ sources:
         type: str
       zoom:
         allowed:
-        - 10
         - 9
         - 8
         - 7
