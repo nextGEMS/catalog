@@ -2,8 +2,11 @@ sources:
   AMIP_CNTL:
     description: ICON-AMIP Control simulation(s) for the C5 project.
     args:
+      chunks:
+        time: 8
+        level: 4
       urlpath:
-        - "/scratch/m/m300575/LUMI_AMIP_{{ grid }}_CNTL/LUMI_AMIP_hpz{{ zoom }}_CNTL_atm_2d_{{ time }}_ml_*.nc"
+        - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_CNTL/LUMI_AMIP_hpz{{ zoom }}_CNTL_atm_?d_{{ time }}_*.nc"
     driver: netcdf
     parameters:
       grid:
@@ -14,6 +17,7 @@ sources:
         type: str
       time:
         allowed:
+        - PT20M
         - PT3H
         - P1D
         default: P1D
@@ -21,8 +25,8 @@ sources:
         type: str
       zoom:
         allowed:
-        - 9
-        default: 9
+        - 8
+        default: 8
         description: zoom resolution of the dataset
         type: int
     metadata:
@@ -30,3 +34,38 @@ sources:
       source_id: ICON-AMIP
       experiment_id: AMIP
       simulation_id: CNTL
+  AMIP_P4K:
+    description: ICON-AMIP +4K simulation(s) for the C5 project.
+    args:
+      chunks:
+        time: 8
+        level: 4
+      urlpath:
+        - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_P4K/LUMI_AMIP_hpz{{ zoom }}_P4K_atm_?d_{{ time }}_*.nc"
+    driver: netcdf
+    parameters:
+      grid:
+        allowed:
+          - R02B08
+        default: R02B08
+        description: original model grid used for computation
+        type: str
+      time:
+        allowed:
+        - PT20M
+        - PT3H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+      zoom:
+        allowed:
+        - 8
+        default: 8
+        description: zoom resolution of the dataset
+        type: int
+    metadata:
+      project: Cloud-Circulation Coupling in a Changing Climate (C5)
+      source_id: ICON-AMIP
+      experiment_id: AMIP
+      simulation_id: P4K
