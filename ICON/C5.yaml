@@ -2,11 +2,8 @@ sources:
   AMIP_CNTL:
     description: ICON-AMIP Control simulation(s) for the C5 project.
     args:
-      chunks:
-        time: 8
-        level: 4
       urlpath:
-        - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_CNTL/LUMI_AMIP_hpz{{ zoom }}_CNTL_atm_?d_{{ time }}_*.nc"
+        - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_CNTL/public/LUMI_AMIP_hpz{{ zoom }}_CNTL_atm_{{ time }}_*.nc"
     driver: netcdf
     parameters:
       grid:
@@ -37,11 +34,8 @@ sources:
   AMIP_P4K:
     description: ICON-AMIP +4K simulation(s) for the C5 project.
     args:
-      chunks:
-        time: 8
-        level: 4
       urlpath:
-        - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_P4K/LUMI_AMIP_hpz{{ zoom }}_P4K_atm_?d_{{ time }}_*.nc"
+        - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_P4K/public/LUMI_AMIP_hpz{{ zoom }}_P4K_atm_{{ time }}_*.nc"
     driver: netcdf
     parameters:
       grid:
