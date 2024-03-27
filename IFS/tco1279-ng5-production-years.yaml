@@ -5,6 +5,8 @@ sources:
       consolidated: False
       urlpath:
         - reference::/work/bm1235/b382776/cycle4/parquets/IFS_9-FESOM_5-production_2d_hourly_healpix512_combined_V2.parq
+      storage_options:
+        remote_protocol: file
   2D_hourly_healpix512_2020s:
     driver: zarr
     args:
@@ -95,6 +97,8 @@ sources:
       consolidated: False
       urlpath:
         - reference::/scratch/m/m300827/IFS_9-FESOM_5-production_3d_hourly_healpix512_combined.parq
+      storage_options:
+        remote_protocol: file
   3D_hourly_healpix512_2020:
     driver: zarr
     args:
