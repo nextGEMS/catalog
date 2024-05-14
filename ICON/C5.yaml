@@ -4,6 +4,7 @@ sources:
     args:
       urlpath:
         - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_CNTL/public/LUMI_AMIP_hpz{{ zoom }}_CNTL_atm_{{ time }}_*.nc"
+        - "/work/mh0730/C5/experiments/independent_{{ grid }}.nc"
     driver: netcdf
     parameters:
       grid:
@@ -36,6 +37,7 @@ sources:
     args:
       urlpath:
         - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_P4K/public/LUMI_AMIP_hpz{{ zoom }}_P4K_atm_{{ time }}_*.nc"
+        - "/work/mh0730/C5/experiments/independent_{{ grid }}.nc"
     driver: netcdf
     parameters:
       grid:
