@@ -43,7 +43,17 @@ sources:
     description: experimental faster 4.4km Cycle 3 experiment, coupled with FESOM 5km 
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3-fastdata.yaml"      
+        path: "{{CATALOG_DIR}}/tco2559-ng5-cycle3-fastdata.yaml"    
+  IFS_9-FESOM_5-production-hist-coupspinup:
+    description: 9km coupled spinup (1990 control), coupled with FESOM 5km
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco1279-ng5-production-hist-coupspinup.yaml"                
+  IFS_9-FESOM_5-production-hist-coupspinup-deepon:
+    description: 9km coupled spinup with Deep On (1990 control), coupled with FESOM 5km
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco1279-ng5-production-hist-coupspinup-deepon.yaml"
   IFS_grids:
     description: grid and area files for IFS Cycle 3 experiments
     driver: yaml_file_cat
