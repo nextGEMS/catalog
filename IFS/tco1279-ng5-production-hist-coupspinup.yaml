@@ -1,0 +1,32 @@
+sources:
+  2D_monthly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sfc.dir/atm2d.json    
+      drop_variables: ['sst', 'ci', '10si', '100si']
+  2D_monthly_healpix512_sst_ci_winds:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sfc.dir/atm2d.json 
+  2D_monthly_healpix512_winds100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/hl.dir/atm2d.json       
+  3D_monthly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/pl.dir/atm3d.json
+  3D_monthly_healpix512_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sol.dir/atm2d.json
