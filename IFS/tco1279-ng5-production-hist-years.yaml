@@ -1,0 +1,377 @@
+sources:
+#  2D_hourly_healpix512:
+#    driver: zarr
+#    args:
+#      consolidated: False
+#      urlpath:
+#        - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production_2d_hourly_healpix512_combined_V2.parq
+#      storage_options:
+#        remote_protocol: file
+  2D_hourly_healpix512_1990s:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/sfc.dir/atm2d.json
+      drop_variables: ['sst', 'ci', '10si', '100si']
+  2D_hourly_healpix512_sst_ci_winds_1990s:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/sfc.dir/atm2d.json        
+#  3D_hourly_healpix512:
+#    driver: zarr
+#    args:
+#      consolidated: False
+#      urlpath:
+#        - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production_3d_hourly_healpix512_combined_V2.parq
+#      storage_options:
+#        remote_protocol: file
+  3D_hourly_healpix512_1990:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/pl.dir/atm3d.json
+  3D_hourly_healpix512_1995:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:       
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/pl.dir/atm3d.json
+  3D_hourly_healpix512_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/sol.dir/atm2d.json
+  2D_hourly_healpix512_winds100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/hl.dir/atm2d.json        
+  2D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/o2d.dir/atm2d.json
+  3D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/o3d.dir/atm2d.json
+  2D_monthly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sfc.dir/atm2d.json    
+      drop_variables: ['sst', 'ci', '10si', '100si']
+  2D_monthly_healpix512_sst_ci_winds:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sfc.dir/atm2d.json 
+  2D_monthly_healpix512_winds100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/hl.dir/atm2d.json       
+  3D_monthly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/pl.dir/atm3d.json
+  3D_monthly_healpix512_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sol.dir/atm2d.json
+  2D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b381679/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/sfc.dir/atm2d.json      
+      drop_variables: ['sst', 'ci', '10si', '100si']
+  2D_hourly_healpix128_sst_ci_winds_1990s:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/sfc.dir/atm2d.json            
+    3D_hourly_healpix128_1990:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/pl.dir/atm3d.json
+  3D_hourly_healpix128_1995:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:       
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/pl.dir/atm3d.json
+  3D_hourly_healpix128_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/sol.dir/atm2d.json
+  2D_hourly_healpix128_winds100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/hl.dir/atm2d.json            
+  2D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/o2d.dir/atm2d.json      
+  3D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/o3d.dir/atm2d.json
+  3D_hourly_0.25deg_1990s:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b381679/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1993/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1994/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1995/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1996/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/pl.dir/atm3d.json
+ 2D_hourly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b381679/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1993/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1994/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1995/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1996/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/sfc.dir/atm2d.json      
+      drop_variables: ['sst', 'ci', '10si', '100si']
+  2D_hourly_0.25deg_sst_ci_winds:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1993/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1994/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1995/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1996/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/sfc.dir/atm2d.json          
+  3D_hourly_0.25deg_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1993/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1994/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1995/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1996/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/sol.dir/atm2d.json
+  2D_hourly_0.25deg_winds100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1993/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1994/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1995/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1996/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/hl.dir/atm2d.json             
+  2D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sfc.dir/atm2d.json   
+      drop_variables: ['sst', 'ci', '10si', '100si']
+  2D_monthly_0.25deg_sst_ci_winds:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sfc.dir/atm2d.json        
+  3D_monthly_0.25deg_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sol.dir/atm2d.json 
+  2D_monthly_0.25deg_winds100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/hl.dir/atm2d.json         
+  3D_monthly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/pl.dir/atm3d.json
