@@ -267,7 +267,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/pl.dir/atm3d.json
- 2D_hourly_0.25deg:
+  2D_hourly_0.25deg:
     driver: zarr
     args:
       consolidated: False
