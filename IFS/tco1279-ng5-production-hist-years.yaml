@@ -172,7 +172,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/sfc.dir/atm2d.json            
-    3D_hourly_healpix128_1990:
+  3D_hourly_healpix128_1990:
     driver: zarr
     args:
       consolidated: False
