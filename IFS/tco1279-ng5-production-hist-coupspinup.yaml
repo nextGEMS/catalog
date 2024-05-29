@@ -2,31 +2,60 @@ sources:
   2D_monthly_healpix512:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sfc.dir/atm2d.json    
-      drop_variables: ['sst', 'ci', '10si', '100si']
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sfc.dir/atm2d.json
+      drop_variables:
+      - sst
+      - ci
+      - 10si
+      - 100si
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist-coupspinup
   2D_monthly_healpix512_sst_ci_winds:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sfc.dir/atm2d.json 
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sfc.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist-coupspinup
   2D_monthly_healpix512_winds100m:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/hl.dir/atm2d.json       
+      - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/hl.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist-coupspinup
   3D_monthly_healpix512:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist-coupspinup
   3D_monthly_healpix512_snow:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist_coupspinup/gribscan_monthly_healpix512/jsons.1988-89/sol.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist-coupspinup
