@@ -146,7 +146,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/b381679/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/sfc.dir/atm2d.json
@@ -257,7 +257,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/b381679/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1993/pl.dir/atm3d.json
@@ -272,7 +272,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/b381679/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1993/sfc.dir/atm2d.json
