@@ -293,3 +293,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/C5.yaml"
+  PrecipPuzzle:
+    description: Simulations to solve the "Precipitation Puzzle"
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/PrecipPuzzle.yaml"
