@@ -73,3 +73,21 @@ sources:
         type: str
     args:
       urlpath: "/work/mh0287/PrecipPuzzle/AMIP_R2B8/mbe2936_AMIP_R2B8_hpz8_atm_{{ time }}_*.nc"
+  mbe2939:
+    driver: netcdf
+    description: Standard AMIP-R2B8 with min_sfc_wind=4. and cloud_num=2000.e+6
+    metadata:
+      atmospheric_grid_id: R02B08
+      experiment_id: ICON-AMIP
+      project: PrecipPuzzle
+      simulation_id: mbe2939
+      source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/dbf6dad5
+    parameters:
+      time:
+        allowed:
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+    args:
+      urlpath: "/work/mh0287/PrecipPuzzle/AMIP_R2B8/mbe2939_AMIP_R2B8_hpz8_atm_{{ time }}_*.nc"
