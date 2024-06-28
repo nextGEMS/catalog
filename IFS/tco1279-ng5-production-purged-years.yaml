@@ -14,7 +14,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2027/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2028/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2029/sfc.dir/atm2d.json
-      #drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si', '100si']
   2D_hourly_healpix512_sst_ci_winds_2020s:
     driver: zarr
     args:
@@ -116,7 +116,7 @@ sources:
       consolidated: False
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2020-2029/sfc.dir/atm2d.json    
-      #drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si', '100si']
   2D_monthly_healpix512_sst_ci_winds:
     driver: zarr
     args:
@@ -156,7 +156,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2027/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2028/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2029/sfc.dir/atm2d.json      
-      #drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si', '100si']
   2D_hourly_healpix128_sst_ci_winds_2020s:
     driver: zarr
     args:
@@ -282,7 +282,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2027/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2028/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2029/sfc.dir/atm2d.json      
-      #drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si', '100si']
   2D_hourly_0.25deg_sst_ci_winds:
     driver: zarr
     args:
@@ -334,7 +334,7 @@ sources:
       consolidated: False
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2020-2029/sfc.dir/atm2d.json   
-      #drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si', '100si']
   2D_monthly_0.25deg_sst_ci_winds:
     driver: zarr
     args:
