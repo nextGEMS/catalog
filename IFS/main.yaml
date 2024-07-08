@@ -1,5 +1,5 @@
 sources:
-  IFS_9-FESOM_5-production-purged:
+  IFS_9-FESOM_5-production:
     description: main 9km scenario (SSP3-7.0), coupled with FESOM 5km, purged
     driver: yaml_file_cat
     args:
@@ -9,8 +9,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco1279-ng5-production-hist-years.yaml"
-  IFS_9-FESOM_5-production:
-    description: main 9km scenario (SSP3-7.0), coupled with FESOM 5km
+  IFS_9-FESOM_5-production-old-prepurge:
+    description: main 9km scenario (SSP3-7.0), coupled with FESOM 5km, before purge
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco1279-ng5-production-years.yaml"
