@@ -14,7 +14,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2027/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2028/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2029/sfc.dir/atm2d.json
-      drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si']
   2D_hourly_healpix512_2030s:
     driver: zarr
     args:
@@ -30,7 +30,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2037/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2038/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2039/sfc.dir/atm2d.json
-      drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si']
   2D_hourly_healpix512_2040s:
     driver: zarr
     args:
@@ -46,7 +46,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2047/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2048/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2049/sfc.dir/atm2d.json
-      drop_variables: ['sst', 'ci', '10si', '100si']      
+      drop_variables: ['sst', 'ci', '10si']      
   2D_hourly_healpix512_sst_ci_winds_2035:
     driver: zarr
     args:
@@ -201,7 +201,28 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2046/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2047/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2048/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2049/hl.dir/atm2d.json                    
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2049/hl.dir/atm2d.json  
+      drop_variables: ['100si']         
+  2D_hourly_healpix512_windspeed100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2035/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2036/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2037/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2038/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2039/hl.dir/atm2d.json        
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2040/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2041/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2042/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2043/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2044/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2045/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2046/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2047/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2048/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2049/hl.dir/atm2d.json                              
   2D_daily_healpix512_ocean:
     driver: zarr
     args:
@@ -281,7 +302,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2030-2034/sfc.dir/atm2d.json    
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2035-2039/sfc.dir/atm2d.json    
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2040-2049/sfc.dir/atm2d.json                      
-      drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si']
   2D_monthly_healpix512_sst_ci_winds:
     driver: zarr
     args:
@@ -297,7 +318,15 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2020-2029/hl.dir/atm2d.json    
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2030-2034/hl.dir/atm2d.json    
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2035-2039/hl.dir/atm2d.json    
-      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2040-2049/hl.dir/atm2d.json         
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2040-2049/hl.dir/atm2d.json        
+      drop_variables: ['100si']                  
+  2D_monthly_healpix512_windspeed100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2035-2039/hl.dir/atm2d.json    
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_healpix512/jsons.2040-2049/hl.dir/atm2d.json        
   3D_monthly_healpix512:
     driver: zarr
     args:
@@ -351,7 +380,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2047/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2048/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2049/sfc.dir/atm2d.json            
-      drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si']
   2D_hourly_healpix128_sst_ci_winds:
     driver: zarr
     args:
@@ -501,7 +530,28 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2046/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2047/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2048/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2049/hl.dir/atm2d.json                     
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2049/hl.dir/atm2d.json        
+      drop_variables: ['100si']     
+  2D_hourly_healpix128_windspeed100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2035/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2036/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2037/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2038/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2039/hl.dir/atm2d.json   
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2040/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2041/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2042/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2043/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2044/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2045/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2046/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2047/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2048/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2049/hl.dir/atm2d.json                                        
   2D_daily_healpix128_ocean:
     driver: zarr
     args:
@@ -652,7 +702,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2047/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2048/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2049/sfc.dir/atm2d.json                        
-      drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si']
   2D_hourly_0.25deg_sst_ci_winds:
     driver: zarr
     args:
@@ -757,7 +807,28 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2046/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2047/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2048/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2049/hl.dir/atm2d.json                    
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2049/hl.dir/atm2d.json           
+      drop_variables: ['100si']        
+  2D_hourly_0.25deg_windspeed100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2035/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2036/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2037/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2038/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2039/hl.dir/atm2d.json    
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2040/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2041/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2042/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2043/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2044/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2045/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2046/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2047/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2048/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_latlon/jsons.2049/hl.dir/atm2d.json                                            
   2D_monthly_0.25deg:
     driver: zarr    
     args:
@@ -767,7 +838,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2030-2034/sfc.dir/atm2d.json 
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2035-2039/sfc.dir/atm2d.json 
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2040-2049/sfc.dir/atm2d.json                   
-      drop_variables: ['sst', 'ci', '10si', '100si']
+      drop_variables: ['sst', 'ci', '10si']
   2D_monthly_0.25deg_sst_ci_winds:
     driver: zarr
     args:
@@ -793,6 +864,14 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2030-2034/hl.dir/atm2d.json 
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2035-2039/hl.dir/atm2d.json 
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2040-2049/hl.dir/atm2d.json             
+      drop_variables: ['100si']                 
+  2D_monthly_0.25deg_windspeed100m:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2035-2039/hl.dir/atm2d.json 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2040-2049/hl.dir/atm2d.json                    
   3D_monthly_0.25deg:
     driver: zarr
     args:
