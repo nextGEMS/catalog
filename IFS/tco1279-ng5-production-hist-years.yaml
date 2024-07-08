@@ -29,7 +29,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/sfc.dir/atm2d.json   
-   2D_hourly_healpix512_2010s:
+  2D_hourly_healpix512_2010s:
     driver: zarr
     args:
       consolidated: False
