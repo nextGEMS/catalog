@@ -209,6 +209,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/o2d.dir/atm2d.json          
+      drop_variables: [avg_hfds,avg_swfup]      
   3D_daily_healpix512_ocean:
     driver: zarr
     args:
@@ -475,7 +476,8 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/o2d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o2d.dir/atm2d.json                 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o2d.dir/atm2d.json       
+      drop_variables: [avg_hfds,avg_swfup]                    
   3D_daily_healpix128_ocean:
     driver: zarr
     args:
