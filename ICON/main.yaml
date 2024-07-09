@@ -39,7 +39,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: /work/bm1235/k202181/ngc4008/ngc4008_{{
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_{{
         time }}_{{ zoom }}.zarr
     driver: zarr
     parameters:
