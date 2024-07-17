@@ -11,6 +11,7 @@ sources:
       grid:
         allowed:
           - R02B08
+          - R02B09
         default: R02B08
         description: original model grid used for computation
         type: str
@@ -45,6 +46,7 @@ sources:
       grid:
         allowed:
           - R02B08
+          - R02B09
         default: R02B08
         description: original model grid used for computation
         type: str
