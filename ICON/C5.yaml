@@ -30,10 +30,11 @@ sources:
         description: zoom resolution of the dataset
         type: int
     metadata:
-      project: Cloud-Circulation Coupling in a Changing Climate (C5)
-      source_id: ICON-AMIP
+      atmospheric_grid_id: "{{ grid }}"
       experiment_id: AMIP
+      project: Cloud-Circulation Coupling in a Changing Climate (C5)
       simulation_id: CNTL
+      source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/66844e56fc6f0c6a8ee66a14bd5ef24be72110c0
   AMIP_P4K:
     description: ICON-AMIP +4K simulation(s) for the C5 project.
     args:
@@ -65,7 +66,8 @@ sources:
         description: zoom resolution of the dataset
         type: int
     metadata:
-      project: Cloud-Circulation Coupling in a Changing Climate (C5)
-      source_id: ICON-AMIP
+      atmospheric_grid_id: "{{ grid }}"
       experiment_id: AMIP
+      project: Cloud-Circulation Coupling in a Changing Climate (C5)
       simulation_id: P4K
+      source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/66844e56fc6f0c6a8ee66a14bd5ef24be72110c0
