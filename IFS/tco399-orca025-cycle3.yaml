@@ -1,4 +1,9 @@
 sources:
+  2D_1h_camaflood:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b381679/camaflood/cycle_3/28km_NEMO/json.dir/atm2d.json
   2D_1h_native:
     driver: zarr
     args:
