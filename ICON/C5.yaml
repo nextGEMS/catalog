@@ -10,6 +10,7 @@ sources:
     parameters:
       grid:
         allowed:
+          - R02B07
           - R02B08
           - R02B09
         default: R02B08
@@ -46,6 +47,7 @@ sources:
     parameters:
       grid:
         allowed:
+          - R02B07
           - R02B08
           - R02B09
         default: R02B08
