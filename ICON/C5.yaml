@@ -73,3 +73,38 @@ sources:
       project: Cloud-Circulation Coupling in a Changing Climate (C5)
       simulation_id: P4K
       source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/66844e56fc6f0c6a8ee66a14bd5ef24be72110c0
+  AMIP_4CO2:
+    description: ICON-AMIP 4x CO2 simulation(s) for the C5 project.
+    args:
+      urlpath:
+        - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_4CO2/public/LUMI_AMIP_hpz{{ zoom }}_4CO2_atm_{{ time }}_*.nc"
+        - "/work/mh0730/C5/experiments/independent_{{ grid }}.nc"
+        - "/work/mh0730/C5/experiments/atm_vgrid_{{ grid }}.nc"
+    driver: netcdf
+    parameters:
+      grid:
+        allowed:
+          - R02B08
+        default: R02B08
+        description: original model grid used for computation
+        type: str
+      time:
+        allowed:
+        - PT20M
+        - PT3H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+      zoom:
+        allowed:
+        - 8
+        default: 8
+        description: zoom resolution of the dataset
+        type: int
+    metadata:
+      atmospheric_grid_id: "{{ grid }}"
+      experiment_id: AMIP
+      project: Cloud-Circulation Coupling in a Changing Climate (C5)
+      simulation_id: 4CO2
+      source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/f504ca91a94097e27fa1b6f4b2658bd52b5d91f2
