@@ -691,4 +691,10 @@ sources:
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/pl.dir/atm3d.json      
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/pl.dir/atm3d.json   
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/pl.dir/atm3d.json
+  2D_1h_camaflood:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b381679/camaflood/prod/hist/json.dir/atm2d.json
