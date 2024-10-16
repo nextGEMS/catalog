@@ -879,4 +879,10 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2020-2029/pl.dir/atm3d.json   
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2030-2034/pl.dir/atm3d.json 
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2035-2039/pl.dir/atm3d.json 
-      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2040-2049/pl.dir/atm3d.json 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2040-2049/pl.dir/atm3d.json
+  2D_1h_camaflood:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b381679/camaflood/prod/SSP370/json.dir/atm2d.json
