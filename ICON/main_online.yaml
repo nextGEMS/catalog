@@ -27,3 +27,39 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+  ngc4008:
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: https://eerie.cloud.dkrz.de/datasets/nextgems.ICON.ngc4008.{{ time }}_{{ zoom }}/kerchunk
+    driver: zarr
+    parameters:
+      time:
+        allowed:
+        - PT15M
+        - PT3H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: ICON-ESM
+      simulation_id: ngc4008
