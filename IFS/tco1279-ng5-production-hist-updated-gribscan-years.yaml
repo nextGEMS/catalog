@@ -266,7 +266,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sfc.dir/atm2d.json    
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-1999/sfc.dir/atm2d.json    
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/sfc.dir/atm2d.json       
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/sfc.dir/atm2d.json          
   2D_monthly_healpix512_winds100m:
@@ -274,7 +274,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/hl.dir/atm2d.json   
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-1999/hl.dir/atm2d.json   
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/hl.dir/atm2d.json      
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/hl.dir/atm2d.json         
   3D_monthly_healpix512:
@@ -282,7 +282,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-1999/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/pl.dir/atm3d.json      
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/pl.dir/atm3d.json            
   3D_monthly_healpix512_snow:
@@ -290,7 +290,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.1990-1999/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/sol.dir/atm2d.json      
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/sol.dir/atm2d.json           
   2D_hourly_healpix128:
@@ -665,7 +665,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sfc.dir/atm2d.json    
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-1999/sfc.dir/atm2d.json    
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sfc.dir/atm2d.json      
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sfc.dir/atm2d.json               
   3D_monthly_0.25deg_snow:
@@ -673,7 +673,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sol.dir/atm2d.json 
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-1999/sol.dir/atm2d.json 
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sol.dir/atm2d.json       
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sol.dir/atm2d.json             
   2D_monthly_0.25deg_winds100m:
@@ -681,7 +681,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/hl.dir/atm2d.json         
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-1999/hl.dir/atm2d.json         
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/hl.dir/atm2d.json     
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/hl.dir/atm2d.json           
   3D_monthly_0.25deg:
@@ -689,7 +689,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-1999/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/pl.dir/atm3d.json      
       - reference::/work/bm1235/u233156/gribscan_cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/pl.dir/atm3d.json
   2D_1h_camaflood:
