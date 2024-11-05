@@ -368,7 +368,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/b382776/cycle4/parquets/IFS_9-FESOM_5-production_2D_hourly_healpix128_combined_V3.parq
+      - reference::/work/bb1153/u233156/cycle4/parquets/IFS_9-FESOM_5-production_2D_hourly_healpix128_combined_V5.parq
       drop_variables: ['sst', 'ci', '10si']
       storage_options:
         remote_protocol: file
@@ -397,7 +397,7 @@ sources:
     args:
       consolidated: False
       urlpath:
-      - reference::/work/bm1235/b382776/cycle4/parquets/IFS_9-FESOM_5-production_3D_hourly_healpix128_combined_V3.parq
+      - reference::/work/bb1153/u233156/cycle4/parquets/IFS_9-FESOM_5-production_3D_hourly_healpix128_combined_V5.parq
       storage_options:
         remote_protocol: file
   3D_hourly_healpix128_2020:
