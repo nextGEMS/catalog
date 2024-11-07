@@ -31,7 +31,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: https://eerie.cloud.dkrz.de/datasets/nextgems.ICON.ngc4008.{{ time }}_{{ zoom }}/kerchunk
+      urlpath: https://s3.eu-dkrz-1.dkrz.cloud/nextgems/rechunked_ngc4008/ngc4008_{{ time }}_{{ zoom }}.zarr
     driver: zarr
     parameters:
       time:
