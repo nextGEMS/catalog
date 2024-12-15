@@ -14,3 +14,30 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/FESOM/main.yaml"
+  ERA5:
+    args:
+      consolidated: true
+      urlpath: swift://swift.dkrz.de/dkrz_41caca03ec414c2f95f52b23b775134f/reanalysis/v1/ERA5_P1M_{{ zoom }}.zarr
+    driver: zarr
+    parameters:
+      zoom:
+        allowed: [8, 7]
+        default: 7
+        description: zoom resolution of the dataset
+        type: int
+  JRA3Q:
+    args:
+      consolidated: true
+      urlpath: swift://swift.dkrz.de/dkrz_41caca03ec414c2f95f52b23b775134f/reanalysis/v1/JRA3Q_P1M_{{ zoom }}.zarr
+    driver: zarr
+    parameters:
+      zoom:
+        allowed: [8, 7]
+        default: 7
+        description: zoom resolution of the dataset
+        type: int
+  MERRA2:
+    args:
+      consolidated: true
+      urlpath: swift://swift.dkrz.de/dkrz_41caca03ec414c2f95f52b23b775134f/reanalysis/v1/MERRA2_P1M_7.zarr
+    driver: zarr
