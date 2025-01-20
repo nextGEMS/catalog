@@ -302,10 +302,17 @@ sources:
     description: ILUMInESS run (coupled R02B10)
     driver: netcdf
     args:
-      urlpath: "/work/mh0287/m300575/ngc5004/ngc5004_*_{{ time }}_*.nc"
+      urlpath: "/work/mh0287/m300575/ngc5004/ngc5004_atm_{{ dim }}_{{ time }}_*.nc"
       concat_dim: time
       combine: nested
     parameters:
+      dim:
+        allowed:
+        - 2d
+        - 3d
+        default: 2d
+        description: dimension
+        type: str
       time:
         allowed:
         - PT3H
