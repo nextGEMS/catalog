@@ -41,8 +41,8 @@ sources:
     args:
       urlpath:
         - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_P4K/public/LUMI_AMIP_hpz{{ zoom }}_P4K_atm_{{ time }}_*.nc"
-        - "/work/mh0730/C5/experiments/independent_{{ grid }}.nc"
-        - "/work/mh0730/C5/experiments/atm_vgrid_{{ grid }}.nc"
+        - "/work/mh0730/C5/experiments/common/independent_{{ grid }}_hpz{{ zoom }}.nc"
+        - "/work/mh0730/C5/experiments/common/atm_vgrid_{{ grid }}_hpz{{ zoom }}.nc"
     driver: netcdf
     parameters:
       grid:
@@ -78,8 +78,8 @@ sources:
     args:
       urlpath:
         - "/work/mh0730/C5/experiments/LUMI_AMIP_{{ grid }}_4CO2/public/LUMI_AMIP_hpz{{ zoom }}_4CO2_atm_{{ time }}_*.nc"
-        - "/work/mh0730/C5/experiments/independent_{{ grid }}.nc"
-        - "/work/mh0730/C5/experiments/atm_vgrid_{{ grid }}.nc"
+        - "/work/mh0730/C5/experiments/common/independent_{{ grid }}_hpz{{ zoom }}.nc"
+        - "/work/mh0730/C5/experiments/common/atm_vgrid_{{ grid }}_hpz{{ zoom }}.nc"
     driver: netcdf
     parameters:
       grid:
