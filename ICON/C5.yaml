@@ -26,6 +26,7 @@ sources:
         type: str
       zoom:
         allowed:
+        - 6
         - 8
         default: 8
         description: zoom resolution of the dataset
