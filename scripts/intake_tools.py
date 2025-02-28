@@ -11,6 +11,8 @@ def iterate_user_parameters(entry, fixed_keys=None):
     names = [x["name"] for x in user_parameters]
     remaining_keys = [x for x in names if x not in fixed_keys.keys()]
     if len(remaining_keys) == 0:
+        if len (fixed_keys) == 0:
+            yield dict()
         return
     param = user_parameters[len(fixed_keys)]
     logger.debug(param)

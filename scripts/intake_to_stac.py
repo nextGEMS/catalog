@@ -1,4 +1,4 @@
-from pystac import Catalog, Item, Asset, MediaType
+from pystac import Catalog, Item, Asset, MediaType, CatalogType
 import datetime
 import pandas as pd
 import numpy as np
@@ -8,6 +8,7 @@ from typing import Union
 from pathlib import Path
 import intake_tools
 import logging
+import stac_tools
 
 logger = logging.getLogger("intake_to_stac")
 logging.basicConfig()
@@ -33,8 +34,7 @@ class catalog_generator:
 
     def parse_catalog(self, catalog):
         intake_tools.traverse_tree(
-            catalog,
-            None,
+            catalog, subcat_callback=self.create_subcat, entry_callback=self.create_item,
         )
 
     def _gen_item(self, name, sim):
@@ -50,21 +50,27 @@ class catalog_generator:
         return item
 
     def _add_assets(self, sim, item):
+        logger.debug("starting to add assets")
         for params in intake_tools.iterate_user_parameters(sim):
             asset = self._gen_asset(sim, params)
+            logger.debug(f"Working with {sim}, {params}")
             item.add_asset(key=f"data_{asset.title}", asset=asset)
 
     def _gen_asset(self, sim, params) -> Asset:
         asset_href = sim(**params).urlpath
-        __class__._check_href(sim, params, asset_href)
+        asset_href = __class__._check_href(sim, params, asset_href)
         logger.debug(asset_href)
-        if asset_href.endswith (".nc"):
+        if asset_href.endswith(".nc"):
             return self._gen_nc_asset(sim, params)
-        elif asset_href.endswith(".zarr") or asset_href.endswith(".parq") or asset_href.startswith("reference:"):
+        elif (
+            asset_href.endswith(".zarr")
+            or asset_href.endswith(".parq")
+            or asset_href.startswith("reference:")
+        ):
             return self._gen_zarr_asset(sim, params)
         else:
             raise RuntimeError(f"what is this? {asset_href}")
-        
+
     def _gen_nc_asset(self, sim, params):
         asset_href = sim(**params).urlpath
         param_string = "_".join([str(x) for x in list(params.values())])
@@ -105,12 +111,31 @@ class catalog_generator:
         )
         return asset
 
+    def create_subcat(self, cat, child, position):
+        parent = stac_tools.get_subcat(self.catalog, position)
+        child = Catalog(child, f"Sub-catalog for {'/'.join(position)}/{child}")
+        parent.add_child(child)
+
+    def create_item(self, cat, child, position):
+        logger.debug(f"processing {'/'.join(position + [child])}")
+
+        parent = stac_tools.get_subcat(self.catalog, position)
+        try:
+            child = self._gen_item(child, cat[child])
+        except Exception as e:
+            logger.error(f"Bad dataset: {'/'.join(position)}/{child}: {e}")
+            return
+        parent.add_item(child)
+
     @staticmethod
     def _check_href(sim, params, href):
         if isinstance(href, list):
+            if len(href) == 1:
+                return href[0]
             raise RuntimeError(
-                f"URI for {sim(**params).name} is a list. Can only handle single files."
+                f"URI is a list of length {len(href)}. Can only handle single files."
             ) from None
+        return href
         # elif "*" in href:
         #    raise RuntimeError("Found a * in the href for {sim(**params).name}. Needs to be a real file name: {href}") from None
 
@@ -162,3 +187,8 @@ class catalog_generator:
         for name, entry in entries.items():
             simulations[entry.describe()["metadata"]["simulation_id"]].append(entry)
         return simulations
+
+    def save(self, destination, catalog_type=CatalogType.SELF_CONTAINED):
+        self.catalog.normalize_and_save(
+            root_href=destination, catalog_type=catalog_type
+        )
