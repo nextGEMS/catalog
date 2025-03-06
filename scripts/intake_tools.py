@@ -4,17 +4,17 @@ from collections.abc import Iterable
 logger = logging.getLogger("intake_tools")
 
 
-def iterate_user_parameters(entry, fixed_keys=None):
+def iterate_user_parameters(entry, fixed_keys=None, ignore = list()):
     if fixed_keys is None:
         fixed_keys = {}
-    user_parameters = entry.describe()["user_parameters"]
-    names = [x["name"] for x in user_parameters]
+    user_parameters = {x["name"] : x for x in entry.describe()["user_parameters"] if x["name"] not in ignore}
+    names = list(user_parameters.keys())
     remaining_keys = [x for x in names if x not in fixed_keys.keys()]
     if len(remaining_keys) == 0:
         if len (fixed_keys) == 0:
             yield dict()
         return
-    param = user_parameters[len(fixed_keys)]
+    param = user_parameters[remaining_keys[0]]
     logger.debug(param)
     key = param["name"]
     for value in param["allowed"]:
@@ -62,7 +62,8 @@ def traverse_tree(
             continue
 
         if isinstance(cat[child], Iterable):
-            subcat_callback(cat, child, position)
+            if subcat_callback is not None:
+                subcat_callback(cat, child, position)
             traverse_tree(
                 cat[child],
                 subcat_callback,
@@ -71,7 +72,8 @@ def traverse_tree(
                 position=position + [child],
             )
         else:
-            entry_callback(cat, child, position)
+            if entry_callback is not None:
+                entry_callback(cat, child, position)
 
 
 def detect_esm_cat(cat, child, position):
