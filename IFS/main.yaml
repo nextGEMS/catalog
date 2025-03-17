@@ -1,5 +1,5 @@
 sources:
-  IFS_2.8-FESOM_5-production:
+  IFS_2.8-FESOM_5-production-deep-off:
     description: 2.8 km IFS with Deep Off, coupled with FESOM 5km, updated gribscan
     driver: yaml_file_cat
     args:
