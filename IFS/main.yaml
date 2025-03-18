@@ -3,7 +3,7 @@ sources:
     description: 2.8 km IFS with Deep Off, coupled with FESOM 5km, updated gribscan
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/tco3999-ng5-production.yaml"
+        path: "{{CATALOG_DIR}}/tco3999-ng5-production-deep-off.yaml"
   IFS_9-FESOM_5-production:
     description: main 9km scenario (SSP3-7.0), coupled with FESOM 5km, updated gribscan
     driver: yaml_file_cat
