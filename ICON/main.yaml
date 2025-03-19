@@ -187,7 +187,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: /fastdata/ka1081/nextgems_cycle3/ngc3028/ngc3028_{{ time }}_{{ zoom }}.zarr
+      urlpath: /work/kd1453/rechunked_ngc3028/ngc3028_{{ time }}_{{ zoom }}.zarr
     driver: zarr
     parameters:
       time:
