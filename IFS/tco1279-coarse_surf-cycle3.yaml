@@ -1,0 +1,31 @@
+sources:
+  2D_1h_native:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo_coarse/gribscan_1h6h_native_v3/json.dir/atm2d.json
+  3D_1h6h_native:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo_coarse/gribscan_1h6h_native_v3/json.dir/atm3d.json
+#  2D_1h_0.25deg:
+#    driver: zarr
+#    args:
+#      consolidated: False
+#      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm2d.json
+#  3D_1h6h_0.25deg:
+#    driver: zarr
+#    args:
+#      consolidated: False
+#      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm3d.json
+#  2D_1h_1deg:
+#    driver: zarr
+#    args:
+#      consolidated: False
+#      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm2d.json
+#  3D_1h6h_1deg:
+#    driver: zarr
+#    args:
+#      consolidated: False
+#      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm3d.json
