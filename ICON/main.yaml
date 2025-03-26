@@ -324,3 +324,31 @@ sources:
       project: ILUMInESS
       source_id: ICON-ESM
       simulation_id: ngc5004
+  ngc5004kerchunk:
+    description: ILUMInESS run (coupled R02B10)
+    args:
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc5004_atm_{{ dim }}_{{ time }}.parq
+    driver: zarr
+    parameters:
+      dim:
+        allowed:
+        - 2d
+        - 3d
+        default: 2d
+        description: dimension
+        type: str
+      time:
+        allowed:
+        - PT3H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+    metadata:
+      project: ILUMInESS
+      source_id: ICON-ESM
+      simulation_id: ngc5004
