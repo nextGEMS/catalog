@@ -300,11 +300,13 @@ sources:
       path: "{{CATALOG_DIR}}/PrecipPuzzle.yaml"
   ngc5004:
     description: ILUMInESS run (coupled R02B10)
-    driver: netcdf
     args:
-      urlpath: "/work/mh0287/m300575/ngc5004/ngc5004_atm_{{ dim }}_{{ time }}_*.nc"
-      concat_dim: time
-      combine: nested
+      chunks: auto
+      consolidated: false
+      storage_options:
+        lazy: true
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc5004_atm_{{ dim }}_{{ time }}.parq
+    driver: zarr
     parameters:
       dim:
         allowed:
