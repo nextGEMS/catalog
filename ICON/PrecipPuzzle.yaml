@@ -185,3 +185,45 @@ sources:
         type: str
     args:
       urlpath: "/work/mh0287/PrecipPuzzle/AMIP_R2B10/mbe2979_AMIP_R2B10_hpz8_atm_{{ time }}_*.nc"
+  mbe3064:
+    driver: netcdf
+    description: Standard AMIP-R2B8
+    metadata:
+      atmospheric_grid_id: R02B08
+      experiment_id: ICON-AMIP
+      project: PrecipPuzzle
+      simulation_id: mbe3064
+      source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/7f6f0dcd/
+    parameters:
+      time:
+        allowed:
+        - PT20M
+        - PT3H
+        - PT6H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+    args:
+      urlpath: "/work/mh0287/PrecipPuzzle/AMIP_R2B8/mbe3064_AMIP_R2B8_hpz8_atm_{{ time }}_*.nc"
+  mbe3065:
+    driver: netcdf
+    description: Standard AMIP-R2B8 with rain fall speed = 2.92 and ice fall speed = 0.25
+    metadata:
+      atmospheric_grid_id: R02B08
+      experiment_id: ICON-AMIP
+      project: PrecipPuzzle
+      simulation_id: mbe3065
+      source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/7f6f0dcd/
+    parameters:
+      time:
+        allowed:
+        - PT20M
+        - PT3H
+        - PT6H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+    args:
+      urlpath: "/work/mh0287/PrecipPuzzle/AMIP_R2B8/mbe3065_AMIP_R2B8_hpz8_atm_{{ time }}_*.nc"      
