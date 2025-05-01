@@ -1,0 +1,109 @@
+sources:
+  2D_hourly_healpix2048:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/2D_hourly_healpix2048.parq
+
+  3D_hourly_healpix2048:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:       
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_hourly_healpix2048.parq
+
+  3D_hourly_healpix2048_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_hourly_healpix2048_snow.parq
+
+  2D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/2D_daily_healpix512_ocean.parq
+
+      #drop_variables: [avg_hfds,avg_swfup]      
+  3D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_daily_healpix512_ocean.parq                     
+  2D_monthly_healpix2048:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:    
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/2D_monthly_healpix2048.parq
+
+  2D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/2D_hourly_healpix128.parq
+
+  3D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:       
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_hourly_healpix128.parq                               
+  3D_hourly_healpix128_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_hourly_healpix128_snow.parq                        
+  2D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off//2D_daily_healpix128_ocean.parq
+
+      #drop_variables: [avg_hfds,avg_swfup]                    
+  3D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_daily_healpix128_ocean.parq
+
+  2D_monthly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:    
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/2D_monthly_healpix128.parq                        
+  3D_hourly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_hourly_0.25deg.parq
+
+  2D_hourly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/2D_hourly_0.25deg.parq
+
+  3D_hourly_0.25deg_snow:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/3D_hourly_0.25deg_snow.parq                                
+  2D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath:    
+      - reference::/work/bm1344/DKRZ/kerchunks_batched/NGC-IFS-tco3999-ng5-production-deep-off/2D_monthly_0.25deg.parq
