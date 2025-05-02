@@ -4,6 +4,11 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco3999-ng5-production-deep-off.yaml"
+  IFS_2.8-FESOM_5-production-deep-off-parq:
+    description: 2.8 km IFS with Deep Off, coupled with FESOM 5km (parquet access)
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco3999-ng5-production-deep-off-parq.yaml"        
   IFS_2.8-FESOM_5-production:
     description: 2.8 km IFS with reduced cloud base mass flux (RCBMF) in the deep convection scheme, coupled with FESOM 5km
     driver: yaml_file_cat
