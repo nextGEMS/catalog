@@ -1,0 +1,91 @@
+sources:
+  2D_hourly_healpix1024:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_hourly_healpix1024.parq
+  3D_hourly_healpix1024:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_hourly_healpix1024.parq
+  2D_daily_healpix1024:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_daily_healpix1024.parq
+  3D_daily_healpix1024:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_daily_healpix1024.parq
+  2D_monthly_healpix1024:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_monthly_healpix1024.parq
+  3D_monthly_healpix1024:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_monthly_healpix1024.parq
+  2D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_hourly_healpix128.parq
+  3D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_hourly_healpix128.parq
+  2D_daily_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_daily_healpix128.parq
+  3D_daily_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_daily_healpix128.parq
+  2D_monthly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_monthly_healpix128.parq
+  3D_monthly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_monthly_healpix128.parq
+  2D_hourly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_hourly_0.25deg.parq
+  3D_hourly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_hourly_0.25deg.parq
+  2D_daily_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_daily_0.25deg.parq
+  3D_daily_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_daily_0.25deg.parq
+  2D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/2D_monthly_0.25deg.parq
+  3D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco2559-eerie_production_202407-rcbmf_end/3D_monthly_0.25deg.parq
