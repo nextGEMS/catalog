@@ -1,0 +1,64 @@
+sources:
+  2D_hourly_healpix2048:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/2D_hourly_healpix2048.parq
+  3D_hourly_healpix2048:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/3D_hourly_healpix2048.parq
+  # 3D_hourly_healpix2048_snow:
+  #   driver: zarr
+  #   args:
+  #     consolidated: False
+  #     urlpath: 
+  #     - reference::/work/bm1235/u233156/gribscan_cycle4_3999_RCBMF/gribscan_1h1d_2D_healpix2048/jsons/sol.dir/atm2d.json       !        
+  2D_monthly_healpix2048:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/2D_monthly_healpix2048.parq
+  2D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/2D_hourly_healpix128.parq
+  3D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/3D_hourly_healpix128.parq
+  # 3D_hourly_healpix128_snow:
+  #   driver: zarr
+  #   args:
+  #     consolidated: False
+  #     urlpath: 
+  #     - reference::/work/bm1235/u233156/gribscan_cycle4_3999_RCBMF/gribscan_1h1d_2D_healpix128/jsons/sol.dir/atm2d.json        !                         
+  2D_monthly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/2D_monthly_healpix128.parq
+  2D_hourly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/2D_hourly_0.25deg.parq
+  3D_hourly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/3D_hourly_0.25deg.parq
+  # 3D_hourly_0.25deg_snow:
+  #   driver: zarr
+  #   args:
+  #     consolidated: False
+  #     urlpath: 
+  #     - reference::/work/bm1235/u233156/gribscan_cycle4_3999_RCBMF/gribscan_1h1d_2D_latlon/jsons/sol.dir/atm2d.json     !                           
+  2D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/b382473/IFS_AMIP/production/parquets/tco3999-ng-rcbmf_end/2D_monthly_0.25deg.parq
