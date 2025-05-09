@@ -4,6 +4,11 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco3999-amip.yaml"
+  IFS_4.4-AMIP:
+    description: 4.4 km IFS, atmosphere-only (AMIP), with reduced cloud base mass flux (RCBMF) in the deep convection scheme. Forced with ESA CCI v3.0.1 SST and sea ice concentration
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco2559-amip.yaml"
   IFS_2.8-FESOM_5-production-deep-off:
     description: 2.8 km IFS with Deep Off, coupled with FESOM 5km
     driver: yaml_file_cat
