@@ -39,7 +39,7 @@ sources:
   MERRA2:
     args:
       consolidated: true
-      urlpath: https://swift.dkrz.de/v1/dkrz_41caca03ec414c2f95f52b23b775134f/reanalysis/v1/MERRA2_P1M_7.zarr
+      urlpath: https://swift.dkrz.de/v1/dkrz_41caca03ec414c2f95f52b23b775134f/reanalysis/v1/MERRA2_P1M_{{ zoom }}.zarr
     driver: zarr
     parameters:
       zoom:
