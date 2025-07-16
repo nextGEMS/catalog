@@ -67,7 +67,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: /work/bm1235/k203123/dy3ha-p/experiments/d3hp003/outdata/d3hp003.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
+      urlpath: https://s3.eu-dkrz-1.dkrz.cloud/wrcp-hackathon/data/ICON/d3hp003.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
     driver: zarr
     description: Atmosphere-only simulation at 2.5 km resolution
     parameters:
