@@ -1,4 +1,87 @@
 sources:
+  icon_d3hp003:
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: /work/bm1235/k203123/dy3ha-p/experiments/d3hp003/outdata/d3hp003.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
+    driver: zarr
+    description: Atmosphere-only simulation at 2.5 km resolution
+    parameters:
+      time:
+        allowed:
+        - PT1H
+        - PT3H
+        - PT6H
+        - P1D
+        default: P1D
+        description: time resolution of the dataset
+        type: str
+      time_method:
+        allowed:
+          - mean
+          - inst
+        default: mean
+        description: time subsetting method
+        type: str
+      zoom:
+        allowed:
+        - 11
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+    metadata:
+      source_id: ICON-ESM
+      simulation_id: d3hp003
+      time_start: 2020-01-01T00:00:00
+      time_end: 2021-03-01T00:00:00
+      title: ICON 2.5 km simulation
+      summary: |
+        Atmosphere-only simulation at 2.5 km resolution. Run for 1 year and 2 months starting in 2020.
+
+        [Visual overview of dataset](https://s3.eu-dkrz-1.dkrz.cloud/wrcp-hackathon/data/ICON/d3hp003.html)
+
+        **Simulation**:
+          * Source code: icon-mpim:feature-dy3ha-p-experiments at commit b9c9da5cef4e7faadf13c2fe213de0c990c94bf3
+          * Horizontal grid: R2B10, 83,886,080 cells, nominal resolution dx = ~2.5 km
+          * Vertical grid: 91 half levels, 90 full levels at mid height between upper and lower half level
+          * Initial conditions: From IFS for date 2020-01-01T00:00:00Z
+          * External data: 
+            * SST and SIC as monthly mean fields pre-processed for usage in AMIP simulations
+            * Well mixed greenhouse gases CO2, CH4, N2O, CFC11, CFC12 as annual means
+            * O3 simulated or prescribed from monthly and zonal mean fields
+
+        **Simulation modifications**:
+          * 2020-05-28T00:00:00Z: timestep atm: 20s -> 15s, ozone: prognostic -> external data, zmaxcloudy: 33km -> 22.5km. zmaxcloudy is the maximum height up to which cloud microphysics is computed.
+          * 2020-06-05T00:00:00Z: timestep atm: 15s -> 20s
+          * 2020-07-27T00:00:00Z: dt_atm: 20s -> 18s, dynamics substeps: 5 -> 6
+          * 2020-08-04T00:00:00Z: dt_atm: 18s -> 20s, dynamics substeps: 6 -> 5
+
+        **Processing**
+          * Fields were remapped from the 2.5 km ICON grid to the Healpix grid with order 12 using the nearest-neighbor interpolation. Lower levels were generated from this Healpix order using conservative aggregation.
+          * Level 12 data were deleted due to the disk space constraints.
+          * 2D fields time means are calculated from each simulation timestep values.
+          * 3D fields are generated on 30 pressure levels as instantaneous values starting at 6-hourly interval (PT6H). Time means are calculated from the instantaneous values.
+          * Additionally, a 3D field `vor` on 3 pressure levels is available as instantaneous values starting at PT3H.
+          * Water content of soil layers `mrso` is available as a 3D field with 5 soil levels starting from PT3H.
+
+      references: https://www.icon-model.org/
+      license: Creative Commons CC BY 4.0. https://creativecommons.org/licenses/by/4.0/
+      creator_name: Karl-Hermann Wieners, Marco Giorgietta, Siddhant Tibrewal
+      creator_email: karl-hermann.wieners@mpimet.mpg.de, marco.giorgetta@mpimet.mpg.de, siddhant.tibrewal@mpimet.mpg.de
+      source: ICON Model
+      institution: Max Planck Institute for Meteorology
+      citation: Takasuka, D., Satoh, M., Miyakawa, T. et al. A protocol and analysis of year-long simulations of global storm-resolving models and beyond. Prog Earth Planet Sci 11, 66 (2024). https://doi.org/10.1186/s40645-024-00668-1
   ngc4008a:
     args:
       chunks: null
