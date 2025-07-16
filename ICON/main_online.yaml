@@ -63,7 +63,7 @@ sources:
       experiment_id: nextgems_prefinal
       source_id: ICON-ESM
       simulation_id: ngc4008
-  icon_d3hp003:
+  d3hp003:
     args:
       chunks: null
       consolidated: true
