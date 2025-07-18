@@ -1,0 +1,50 @@
+sources:
+  ifs_tco3999-ng5_rcbmf_cf:
+      args:
+        chunks: auto
+        consolidated: true
+        urlpath: >
+          {% with time_map = {'PT1H': 'hourly'}, zoom_map = {7: '128', 9: '512', 10: '1024', 11: '2048'} -%}
+          https://s3.eu-dkrz-1.dkrz.cloud/wrcp-hackathon/data/IFS-FESOM/{{ time_map[time] }}_healpix{{ zoom_map[zoom] }}.zarr
+          {%- endwith %}
+      driver: zarr
+      parameters:
+        time:
+          allowed:
+          - PT1H
+          default: PT1H
+          description: time resolution of the dataset
+          type: str
+        zoom:
+          allowed:
+          - 7
+          - 11
+          default: 7
+          description: zoom level of the dataset
+          type: int
+      metadata:
+        title: IFS-FESOM 2.8km simulation (RCBMF), CF conventions + rechunked
+        summary: |
+          Main coupled IFS simulation at 2.8 km resolution, with reduced cloud base mass flux. Run for 1 year and 2 months, starting in 2020. Just available via the online catalog (s3 DKRZ cloud).
+  
+          **General**:
+            * The Integrated Forecasting System (IFS), developed at ECMWF, is a spectral-transform atmospheric model with two-time-level semi-implicit, semi-Lagrangian time stepping (Temperton et al., 2001; Hortal, 2002; Diamantakis and Váňa, 2021). It is coupled to other Earth system components (land, waves, ocean, sea ice).
+            * The global hackathon simulations at 2.8km are with the IFS-FESOM configuration (Rackow et al. 2025), coupled to the FESOM2 ocean-sea ice model.
+  
+          **Simulation**:
+            * This is one of two new IFS simulations at 2.8 km resolution, coupled to FESOM 5 km. The simulations are started on 01.01.2020 and run for 14 months, ending on 01.03.2021. The two simulations differ in the treatment of deep convection. This main simulation (RCBMF) has the shallow convection scheme fully active and the deep convection scheme weakly active (with a strongly reduced cloud base mass flux), in agreement with 9 km nextGEMS production simulations, while the second simulation (DEEPOFF; catalog entry *ifs_tco3999-ng5_deepoff*) only has the shallow convection scheme active and the deep convection scheme completely switched off.
+  
+          **Processing**:
+            * This main IFS simulation at 2.8 km is provided via the DKRZ cloud (s3), was rechunked, and largely follows CF naming of variables, as in the [HK25 data request](https://digital-earths-global-hackathon.github.io/hosting/technical/data_request.html). You can check the dataset_transformation script [here](https://github.com/digital-earths-global-hackathon/tools/blob/transform-ifs/dataset_transforms/ifs2s3.py) for details how IFS variables were mapped to the CF standard. Metadata may not be fully consistent yet for transformed variables but will be updated step by step (the target was to follow units of the according ICON simulation). There are additional IFS variables provided with their original naming; please refer to the [parameter database](https://codes.ecmwf.int/grib/param-db/) for more information on those additional variables.
+            * The same simulation without variable transformation/with original IFS variable naming is available under catalog entry *ifs_tco3999-ng5_rcbmf*. Note that this dataset is not rechunked, so you may experience different performance depending on the task.
+            * Output is written to HEALPix H2048 (zoom level 11, about 3 km resolution), and to H128 (level 7, about 50 km resolution). The remapping to zoom level 7 used conservative interpolation for the 2D variables and linear interpolation for the 3D variables. Remapping to the high-resolution H2048 (level 11) was also done with linear interpolation. Output is available hourly (PT1H). In addition, we also provide monthly means (P1M), but only for those variables that are accumulated in time (all fluxes, e.g. radiation, precipitation, etc.).
+        license: Creative Commons CC BY 4.0. https://creativecommons.org/licenses/by/4.0/
+        creator_name: Thomas Rackow, Tobias Becker, Xabier Pedruzo-Bagazgoitia
+        creator_email: thomas.rackow@ecmwf.int, tobias.becker@ecmwf.int, xabier.pedruzo@ecmwf.int
+        source_id: IFS-FESOM
+        simulation_id: RCBMF
+        time_start: 2020-01-01T00:00:00
+        time_end: 2021-03-01T00:00:00
+        references: https://doi.org/10.5194/gmd-18-33-2025, https://www.ecmwf.int/en/forecasts/documentation-and-support/changes-ecmwf-model, https://fesom.de
+        institution: European Centre for Medium-Range Weather Forecasts (ECMWF)
+        citation: Rackow, T., Pedruzo-Bagazgoitia, X., Becker, T., Milinski, S., Sandu, I., Aguridan, R., Bechtold, P., Beyer, S., Bidlot, J., Boussetta, S., Deconinck, W., Diamantakis, M., Dueben, P., Dutra, E., Forbes, R., Ghosh, R., Goessling, H. F., Hadade, I., Hegewald, J., Jung, T., Keeley, S., Kluft, L., Koldunov, N., Koldunov, A., Kölling, T., Kousal, J., Kühnlein, C., Maciel, P., Mogensen, K., Quintino, T., Polichtchouk, I., Reuter, B., Sármány, D., Scholz, P., Sidorenko, D., Streffing, J., Sützl, B., Takasuka, D., Tietsche, S., Valentini, M., Vannière, B., Wedi, N., Zampieri, L., and Ziemen, F. - Multi-year simulations at kilometre scale with the Integrated Forecasting System coupled to FESOM2.5 and NEMOv3.4, Geosci. Model Dev., 18, 33–69, https://doi.org/10.5194/gmd-18-33-2025, 2025.
