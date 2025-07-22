@@ -25,7 +25,7 @@ sources:
       metadata:
         title: IFS-FESOM 2.8km simulation (RCBMF), CF conventions + rechunked
         summary: |
-          Main coupled IFS simulation at 2.8 km resolution, with reduced cloud base mass flux. Run for 1 year and 2 months, starting in 2020. Just available via the online catalog (s3 DKRZ cloud). This dataset is also known as IFS_2.8-FESOM_5-production-CF in the context of the Digital Earths Global Hackathon 2025.
+          Main coupled IFS simulation at 2.8 km resolution, with reduced cloud base mass flux. Run for 1 year and 2 months, starting in 2020. This dataset is also known as IFS_2.8-FESOM_5-production-CF in the context of the Digital Earths Global Hackathon 2025.
   
           **General**:
             * The Integrated Forecasting System (IFS), developed at ECMWF, is a spectral-transform atmospheric model with two-time-level semi-implicit, semi-Lagrangian time stepping (Temperton et al., 2001; Hortal, 2002; Diamantakis and Váňa, 2021). It is coupled to other Earth system components (land, waves, ocean, sea ice).
