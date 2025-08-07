@@ -58,3 +58,15 @@ sources:
       license: CC-BY-4.0
       summary: IMERG daily 0.1deg global precipitation data
       title: IMERG Total Precipitation Data
+  GSMaP:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_74abd8a8-de4c-441a-aad8-16e88afccc3a/GSMaP/GsMap_Daily_Precip_Rate_v1.zarr
+    driver: zarr
+    metadata:
+      creator_email: shem.robinson@mpimet.mpg.de, shem.h.robinson@gmail.com
+      creator_name: Shem Robinson
+      license: CC-BY-4.0
+      summary: GSMaP standard/v8 Daily Precipitation Data
+      comment: Converted from mm/hr to mm/day
+      title: GSMaP (v8) daily total Precipitation data
