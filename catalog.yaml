@@ -47,3 +47,14 @@ sources:
         default: 7
         description: zoom resolution of the dataset
         type: int
+  IMERG:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_74abd8a8-de4c-441a-aad8-16e88afccc3a/IMERG/IMERG_Daily_Precip_Rate_v1.zarr
+    driver: zarr
+    metadata:
+      creator_email: shem.robinson@mpimet.mpg.de, shem.h.robinson@gmail.com
+      creator_name: Shem Robinson
+      license: CC-BY-4.0
+      summary: IMERG daily 0.1deg global precipitation data
+      title: IMERG Total Precipitation Data
