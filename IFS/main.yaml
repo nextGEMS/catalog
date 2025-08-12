@@ -113,6 +113,21 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/tco1279-orca025-cycle3.yaml"      
+  IFS_9-NEMO_25-deep-off-cycle3:
+    description: 9km Cycle 3 experiment, coupled with NEMO 25km, deep off
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco1279-orca025-deep-off-cycle3.yaml"
+  IFS_9-NEMO_25-deep-off-shallow-off-cycle3:
+    description: 9km Cycle 3 experiment, coupled with NEMO 25km, deep off, shallow off
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco1279-orca025-deep-off-shallow-off-cycle3.yaml"
+  IFS_9-NEMO_25-RCBMF-cycle3:
+    description: 9km Cycle 3 experiment, coupled with NEMO 25km, reduced cloud base mass flux
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco1279-orca025-rcbmf-cycle3.yaml"
   IFS_9-coarse_surf-cycle3:
     description: 9km Cycle 3+ experiment, coarsened surface information to +- 25km
     driver: yaml_file_cat
