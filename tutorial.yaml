@@ -1,0 +1,13 @@
+sources:
+  ICON.native.2d_PT6H_inst:
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_948e7d4bbfbb445fbff5315fc433e36a/easygems_tutorial/ICON.native.2d_PT6H_inst.zarr
+    driver: zarr
+  ICON.native.2d_P1D_mean:
+    args:
+      chunks: null
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_948e7d4bbfbb445fbff5315fc433e36a/easygems_tutorial/ICON.native.2d_P1D_mean.zarr
+    driver: zarr

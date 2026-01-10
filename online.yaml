@@ -65,3 +65,8 @@ sources:
       summary: GSMaP standard/v8 Daily Precipitation Data
       comment: Converted from mm/hr to mm/day
       title: GSMaP (v8) daily total Precipitation data
+  tutorial:
+    description: Example datasets for use in tutorials
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tutorial.yaml"
