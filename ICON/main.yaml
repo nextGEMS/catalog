@@ -306,7 +306,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: /fastdata/ka1081/nextgems_cycle3/ngc3028/ngc3028_bc_land.zarr
+      urlpath: /work/mh0287/k202134/ngc3028/ngc3028_bc_land.zarr
       use_cftime: true
     driver: zarr
     metadata:
