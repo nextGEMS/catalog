@@ -308,20 +308,11 @@ sources:
   ngc5004:
     description: ILUMInESS run (coupled R02B10)
     args:
-      chunks: auto
-      consolidated: false
-      storage_options:
-        lazy: true
-      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc5004_atm_{{ dim }}_{{ time }}.parq
+      consolidated: true
+      urlpath: /work/mh0731/m300575/ngc5004/ngc5004_{{ time }}_v1.zarr
+      zarr_format: 3
     driver: zarr
     parameters:
-      dim:
-        allowed:
-        - 2d
-        - 3d
-        default: 2d
-        description: dimension
-        type: str
       time:
         allowed:
         - PT3H
