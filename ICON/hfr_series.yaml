@@ -1,0 +1,333 @@
+sources:
+  hfr0008:
+    description: Coupled simulation at Atm-5.0km and Oce-5.0km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0008_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 10
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0008
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-5.0km/Oce-5.0km simulation
+  hfr0009:
+    description: Coupled simulation at Atm-2.5km and Oce-2.5km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0009_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 11
+        - 10
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0009
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-2.5km/Oce-2.5km simulation
+  hfr0010:
+    description: Coupled simulation at Atm-5.0km and Oce-2.5km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0010_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 11
+        - 10
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0010
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-5.0km/Oce-2.5km simulation
+  hfr0012:
+    description: Coupled simulation at Atm-2.5km and Oce-5.0km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0012_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 11
+        - 10
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0012
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-2.5km/Oce-5.0km simulation
+  hfr0013:
+    description: Coupled simulation at Atm-5.0km and Oce-1.2km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0013_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 12
+        - 11
+        - 10
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0013
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-5.0km/Oce-1.2km simulation
+  hfr0014:
+    description: Coupled simulation at Atm-10.0km and Oce-5.0km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0014_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 10
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0014
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-10.0km/Oce-5.0km simulation
+  hfr0015:
+    description: Coupled simulation at Atm-10.0km and Oce-10.0km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0015_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0015
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-10.0km/Oce-10.0km simulation
+  hfr0016:
+    description: Coupled simulation at Atm-5.0km and Oce-10.0km
+    args:
+      consolidated: true
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0016_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      zarr_format: 3
+    driver: zarr
+    parameters:
+      idf:
+        allowed:
+        - atm_20min_avg
+        - atm_3h_avg
+        - oce_1h_avg
+        - oce_3h_avg
+        - oce_3h_inst
+        default: atm_3h_avg
+        description: data group identifier
+        type: str
+      zoom:
+        allowed:
+        - 10
+        - 09
+        - 08
+        - 07
+        - 06
+        - 05
+        - 04
+        - 03
+        - 02
+        - 01
+        - 00
+        default: 00
+        description: zoom resolution of the dataset
+        type: str
+    metadata:
+      project: TRR181L4
+      source_id: ICON-ESM
+      simulation_id: hfr0016
+      time_start: 2020-01-01T00:00:00
+      time_end: 2020-03-01T00:00:00
+      title: ICON Atm-5.0km/Oce-10.0km simulation
