@@ -3,7 +3,7 @@ sources:
     description: Coupled simulation at Atm-5.0km and Oce-5.0km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0008_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0008_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -20,19 +20,19 @@ sources:
       zoom:
         allowed:
         - 10
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
@@ -44,7 +44,7 @@ sources:
     description: Coupled simulation at Atm-2.5km and Oce-2.5km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0009_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0009_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -62,19 +62,19 @@ sources:
         allowed:
         - 11
         - 10
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
@@ -86,7 +86,7 @@ sources:
     description: Coupled simulation at Atm-5.0km and Oce-2.5km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0010_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0010_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -104,19 +104,19 @@ sources:
         allowed:
         - 11
         - 10
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
@@ -128,7 +128,7 @@ sources:
     description: Coupled simulation at Atm-2.5km and Oce-5.0km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0012_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0012_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -146,19 +146,19 @@ sources:
         allowed:
         - 11
         - 10
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
@@ -170,7 +170,7 @@ sources:
     description: Coupled simulation at Atm-5.0km and Oce-1.2km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0013_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0013_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -189,19 +189,19 @@ sources:
         - 12
         - 11
         - 10
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
@@ -213,7 +213,7 @@ sources:
     description: Coupled simulation at Atm-10.0km and Oce-5.0km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0014_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0014_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -230,19 +230,19 @@ sources:
       zoom:
         allowed:
         - 10
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
@@ -254,7 +254,7 @@ sources:
     description: Coupled simulation at Atm-10.0km and Oce-10.0km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0015_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0015_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -270,19 +270,19 @@ sources:
         type: str
       zoom:
         allowed:
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
@@ -294,7 +294,7 @@ sources:
     description: Coupled simulation at Atm-5.0km and Oce-10.0km
     args:
       consolidated: true
-      urlpath: /work/mh0731/m300738/trr_experiments/hfr0016_zstores/{{ idf }}_hpz{{ zoom }}.zarr
+      urlpath: /work/mh0731/m300738/trr_experiments/hfr0016_zstores/{{ idf }}_hpz{{ "%02d" % zoom }}.zarr
       zarr_format: 3
     driver: zarr
     parameters:
@@ -311,19 +311,19 @@ sources:
       zoom:
         allowed:
         - 10
-        - 09
-        - 08
-        - 07
-        - 06
-        - 05
-        - 04
-        - 03
-        - 02
-        - 01
-        - 00
-        default: 00
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
         description: zoom resolution of the dataset
-        type: str
+        type: int
     metadata:
       project: TRR181L4
       source_id: ICON-ESM
