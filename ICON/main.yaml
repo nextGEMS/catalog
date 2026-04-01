@@ -324,3 +324,8 @@ sources:
       project: ILUMInESS
       source_id: ICON-ESM
       simulation_id: ngc5004
+  hfr_series:
+    description: Coupled ICON simulations at various horizontal grid combinations 
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/hfr_series.yaml"
