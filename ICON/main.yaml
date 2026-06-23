@@ -122,7 +122,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: https://s3.eu-dkrz-1.dkrz.cloud/nextgems/rechunked_ngc4008/ngc4008_{{ time }}_{{ zoom }}.zarr
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_{{ time }}_{{ zoom }}.zarr
     driver: zarr
     parameters:
       time:
