@@ -3,7 +3,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: https://s3.waterpark.dkrz.de/wcrp-hackathon/ICON/rechunked_ngc3028/ngc3028_{{ time }}_{{ zoom }}.zarr
+      urlpath: https://s3.waterpark.dkrz.de/misc/wcrp-hackathon/ICON/rechunked_ngc3028/ngc3028_{{ time }}_{{ zoom }}.zarr
     driver: zarr
     parameters:
       time:
@@ -31,7 +31,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: https://s3.waterpark.dkrz.de/wcrp-hackathon/ICON/rechunked_ngc4008/ngc4008_{{ time }}_{{ zoom }}.zarr
+      urlpath: https://s3.waterpark.dkrz.de/misc/wcrp-hackathon/ICON/rechunked_ngc4008/ngc4008_{{ time }}_{{ zoom }}.zarr
     driver: zarr
     parameters:
       time:
@@ -67,7 +67,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: https://s3.waterpark.dkrz.de/wcrp-hackathon/ICON/d3hp003.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
+      urlpath: https://s3.waterpark.dkrz.de/misc/wcrp-hackathon/ICON/d3hp003.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
     driver: zarr
     description: Atmosphere-only simulation at 2.5 km resolution
     parameters:
