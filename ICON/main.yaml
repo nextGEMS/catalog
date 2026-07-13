@@ -3,7 +3,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: https://s3.eu-dkrz-1.dkrz.cloud/wrcp-hackathon/data/ICON/d3hp003.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
+      urlpath: /work/bm1235/k203123/dy3ha-p/experiments/d3hp003/outdata/d3hp003_orig.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
     driver: zarr
     description: Atmosphere-only simulation at 2.5 km resolution
     parameters:
@@ -19,25 +19,25 @@ sources:
       time_method:
         allowed:
           - mean
-          - inst
+          - point
         default: mean
         description: time subsetting method
         type: str
       zoom:
         allowed:
-        - 11
-        - 10
-        - 9
-        - 8
-        - 7
-        - 6
-        - 5
-        - 4
-        - 3
-        - 2
-        - 1
-        - 0
-        default: 0
+        - z11
+        - z10
+        - z9
+        - z8
+        - z7
+        - z6
+        - z5
+        - z4
+        - z3
+        - z2
+        - z1
+        - z0
+        default: z0
         description: zoom resolution of the dataset
         type: int
     metadata:
