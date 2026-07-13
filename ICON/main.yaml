@@ -19,7 +19,7 @@ sources:
       time_method:
         allowed:
           - mean
-          - point
+          - inst
         default: mean
         description: time subsetting method
         type: str
