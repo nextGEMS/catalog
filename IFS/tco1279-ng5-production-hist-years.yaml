@@ -2,15 +2,20 @@ sources:
   2D_hourly_healpix512:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_2D_hourly_healpix512_combined_V3.parq
       storage_options:
         remote_protocol: file
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_healpix512_1990s:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/sfc.dir/atm2d.json
@@ -21,11 +26,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/sfc.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/sfc.dir/atm2d.json     
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/sfc.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_healpix512_2000s:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2000/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2001/sfc.dir/atm2d.json
@@ -36,11 +46,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/sfc.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/sfc.dir/atm2d.json   
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/sfc.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_healpix512_2010s:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/sfc.dir/atm2d.json
@@ -51,80 +66,120 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/sfc.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/sfc.dir/atm2d.json             
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/sfc.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_3D_hourly_healpix512_combined_V3.parq
       storage_options:
         remote_protocol: file
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512_1990:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512_1995:
     driver: zarr
     args:
-      consolidated: False
-      urlpath:       
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/pl.dir/atm3d.json   
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512_2000:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2000/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2001/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2002/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2003/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2004/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512_2005:
     driver: zarr
     args:
-      consolidated: False
-      urlpath:       
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2005/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/pl.dir/atm3d.json     
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512_2010:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2012/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2013/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2014/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512_2015:
     driver: zarr
     args:
-      consolidated: False
-      urlpath:       
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2015/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/pl.dir/atm3d.json          
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix512_snow:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/sol.dir/atm2d.json
@@ -144,7 +199,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/sol.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/sol.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2012/sol.dir/atm2d.json
@@ -154,11 +209,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/sol.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/sol.dir/atm2d.json          
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/sol.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_healpix512_winds100m:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/hl.dir/atm2d.json
@@ -169,7 +229,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/hl.dir/atm2d.json       
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2000/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2001/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2002/hl.dir/atm2d.json
@@ -179,7 +239,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/hl.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2012/hl.dir/atm2d.json
@@ -189,12 +249,17 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/hl.dir/atm2d.json             
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/hl.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_daily_healpix512_ocean:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/o2d.dir/atm2d.json
@@ -214,7 +279,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/o2d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/o2d.dir/atm2d.json     
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2012/o2d.dir/atm2d.json
@@ -224,13 +289,20 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/o2d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/o2d.dir/atm2d.json          
-      drop_variables: [avg_hfds,avg_swfup]      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/o2d.dir/atm2d.json
+      drop_variables:
+      - avg_hfds
+      - avg_swfup
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_daily_healpix512_ocean:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/o3d.dir/atm2d.json
@@ -250,7 +322,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/o3d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/o3d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2012/o3d.dir/atm2d.json
@@ -260,120 +332,185 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/o3d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/o3d.dir/atm2d.json            
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/o3d.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_monthly_healpix512:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sfc.dir/atm2d.json    
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/sfc.dir/atm2d.json       
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/sfc.dir/atm2d.json          
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/sfc.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_monthly_healpix512_winds100m:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/hl.dir/atm2d.json   
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/hl.dir/atm2d.json      
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/hl.dir/atm2d.json         
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/hl.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_monthly_healpix512:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/pl.dir/atm3d.json      
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/pl.dir/atm3d.json            
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_monthly_healpix512_snow:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.1990-99/sol.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/sol.dir/atm2d.json      
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/sol.dir/atm2d.json           
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2000-2009/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_healpix512/jsons.2010-2019/sol.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_healpix128:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_2D_hourly_healpix128_combined_V3.parq
       storage_options:
         remote_protocol: file
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_3D_hourly_healpix128_combined_V3.parq
       storage_options:
         remote_protocol: file
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128_1990:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128_1995:
     driver: zarr
     args:
-      consolidated: False
-      urlpath:       
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128_2000:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2000/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2001/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2002/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2003/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2004/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128_2005:
     driver: zarr
     args:
-      consolidated: False
-      urlpath:       
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2005/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2006/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2007/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2008/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/pl.dir/atm3d.json   
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128_2010:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2010/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2011/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2012/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2013/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2014/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128_2015:
     driver: zarr
     args:
-      consolidated: False
-      urlpath:       
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2015/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/pl.dir/atm3d.json               
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_healpix128_snow:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/sol.dir/atm2d.json
@@ -393,7 +530,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2006/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2007/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2008/sol.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/sol.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2010/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2011/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2012/sol.dir/atm2d.json
@@ -403,11 +540,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/sol.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/sol.dir/atm2d.json         
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/sol.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_healpix128_winds100m:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/hl.dir/atm2d.json
@@ -418,7 +560,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/hl.dir/atm2d.json         
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2000/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2001/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2002/hl.dir/atm2d.json
@@ -428,7 +570,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2006/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2007/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2008/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/hl.dir/atm2d.json           
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2010/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2011/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2012/hl.dir/atm2d.json
@@ -438,12 +580,17 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/hl.dir/atm2d.json          
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/hl.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_daily_healpix128_ocean:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/o2d.dir/atm2d.json
@@ -453,7 +600,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/o2d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/o2d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2000/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2001/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2002/o2d.dir/atm2d.json
@@ -463,7 +610,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2006/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2007/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2008/o2d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/o2d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2010/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2011/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2012/o2d.dir/atm2d.json
@@ -473,13 +620,20 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/o2d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/o2d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o2d.dir/atm2d.json       
-      drop_variables: [avg_hfds,avg_swfup]                    
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o2d.dir/atm2d.json
+      drop_variables:
+      - avg_hfds
+      - avg_swfup
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_daily_healpix128_ocean:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/o3d.dir/atm2d.json
@@ -499,7 +653,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2006/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2007/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2008/o3d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/o3d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2010/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2011/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2012/o3d.dir/atm2d.json
@@ -509,11 +663,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/o3d.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o3d.dir/atm2d.json            
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o3d.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_0.25deg_1990s:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/pl.dir/atm3d.json
@@ -525,10 +684,15 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_0.25deg_2000s:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2000/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2001/pl.dir/atm3d.json
@@ -539,11 +703,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2006/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2007/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2008/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/pl.dir/atm3d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_0.25deg_2010s:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2010/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2011/pl.dir/atm3d.json
@@ -554,11 +723,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2016/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2017/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2018/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/pl.dir/atm3d.json            
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_0.25deg:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/sfc.dir/atm2d.json
@@ -569,7 +743,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1996/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/sfc.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/sfc.dir/atm2d.json            
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2000/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2001/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2002/sfc.dir/atm2d.json
@@ -579,7 +753,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2006/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2007/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2008/sfc.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/sfc.dir/atm2d.json        
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2010/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2011/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2012/sfc.dir/atm2d.json
@@ -589,12 +763,17 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2016/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2017/sfc.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2018/sfc.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/sfc.dir/atm2d.json         
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/sfc.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_hourly_0.25deg_snow:
     driver: zarr
     args:
-      consolidated: False
-      urlpath: 
+      consolidated: false
+      urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1992/sol.dir/atm2d.json
@@ -614,7 +793,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2006/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2007/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2008/sol.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/sol.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2010/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2011/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2012/sol.dir/atm2d.json
@@ -624,11 +803,16 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2016/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2017/sol.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2018/sol.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/sol.dir/atm2d.json            
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/sol.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_hourly_0.25deg_winds100m:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1990/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1991/hl.dir/atm2d.json
@@ -639,7 +823,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1996/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1997/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1998/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/hl.dir/atm2d.json           
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.1999/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2000/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2001/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2002/hl.dir/atm2d.json
@@ -649,7 +833,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2006/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2007/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2008/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/hl.dir/atm2d.json         
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2009/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2010/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2011/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2012/hl.dir/atm2d.json
@@ -659,42 +843,72 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2016/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2017/hl.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2018/hl.dir/atm2d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/hl.dir/atm2d.json            
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_latlon/jsons.2019/hl.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_monthly_0.25deg:
-    driver: zarr    
+    driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sfc.dir/atm2d.json    
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sfc.dir/atm2d.json      
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sfc.dir/atm2d.json               
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sfc.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sfc.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_monthly_0.25deg_snow:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sol.dir/atm2d.json 
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sol.dir/atm2d.json       
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sol.dir/atm2d.json             
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sol.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sol.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_monthly_0.25deg_winds100m:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/hl.dir/atm2d.json         
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/hl.dir/atm2d.json     
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/hl.dir/atm2d.json           
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/hl.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/hl.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   3D_monthly_0.25deg:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/pl.dir/atm3d.json
-      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/pl.dir/atm3d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/pl.dir/atm3d.json
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/pl.dir/atm3d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
   2D_1h_camaflood:
     driver: zarr
     args:
-      consolidated: False
+      consolidated: false
       urlpath:
       - reference::/work/bm1235/b381679/camaflood/prod/hist/json.dir/atm2d.json
+    metadata:
+      project: nextGEMS
+      experiment_id: nextgems_prefinal
+      source_id: IFS-FESOM
+      simulation_id: IFS_9-FESOM_5-production-hist
