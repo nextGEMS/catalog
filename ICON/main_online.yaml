@@ -67,7 +67,7 @@ sources:
     args:
       chunks: null
       consolidated: true
-      urlpath: https://s3.waterpark.dkrz.de/misc/wcrp-hackathon/ICON/d3hp003.zarr/{{ time }}_{{ time_method }}_z{{ zoom }}_atm
+      urlpath: https://s3.waterpark.dkrz.de/misc/wcrp-hackathon/ICON/d3hp003_rechunked.zarr/{{ time }}_{{ time_method }}_atm/multiscales/zoom_{{ zoom }}
     driver: zarr
     description: Atmosphere-only simulation at 2.5 km resolution
     parameters:
